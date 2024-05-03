@@ -28,7 +28,6 @@ extension AnalyticEvent {
 
 struct UserActionEvent: AnalyticEvent {
   typealias ItemType = UserActionEventType
-    var userName: String
     var type: ItemType
     var parameters: [String : Any]
 }
@@ -75,43 +74,46 @@ struct LogEventsService: AnalyticsService {
 
 struct User {
     var name: String
-    var actionType: UserActionEventType
-    var parameters: [String: Any]
+    var analyticEvent: any AnalyticEvent
 
     func printAll() {
-        print("User \(name) has taken an action: \(actionType.name), with these parameters: \(parameters)")
+      print("User \(name) has taken an action: \(analyticEvent.name), with these parameters: \(analyticEvent.parameters)")
     }
 }
 
 var eventLogger = LogEventsService()
 
-let userOne = User(name: "Pavla", actionType: UserActionEventType(name: "Tap on Button"), parameters: ["buttonName": "Buy Now", "isTapped": true])
-let userTwo = User(name: "Tereza", actionType: UserActionEventType(name: "Fill survey"), parameters: ["surveyTitle": "Satisfaction Survey", "allFilledIn": false])
-
 let buttonPressEvent = UserActionEvent(
-    userName: userOne.name,
-    type: userOne.actionType,
-    parameters: userOne.parameters
-)
-
-eventLogger.logEvent(buttonPressEvent)
-print(buttonPressEvent)
-print(eventLogger.calledLogs)
-userOne.printAll()
+  type: UserActionEventType(
+    name: "Tapped on Button"),
+  parameters: ["buttonName": "Buy Now", "isTapped": true])
 
 let fillSurveyEvent = UserActionEvent(
-    userName: userTwo.name,
-    type: userTwo.actionType,
-    parameters: userTwo.parameters)
+  type: UserActionEventType(
+    name: "Filled Survey"),
+  parameters: ["surveyTitle": "Satisfaction Survey", "allFilledIn": false])
 
-eventLogger.logEvent(fillSurveyEvent)
+let userOne = User(name: "Pavla", analyticEvent: buttonPressEvent)
+userOne.printAll()
+
+let userTwo = User(name: "Tereza", analyticEvent: fillSurveyEvent)
 userTwo.printAll()
-eventLogger.calledLogs
 
 
+// Screen View Event
 
-var userViewScreen = ScreenViewEvent(type: ScreenEventType(name: "View on Screen"), parameters: ["screenTitle": "Main Screen", "pageNumber": 3])
-// let userTwo = User(name: "Tereza", actionType: "View on Screen")
-//var userViewOnScreen = ScreenEventType(name: userTwo.actionType)
+let viewMainScreen = ScreenViewEvent(
+  type: ScreenEventType(
+    name: "View Main Screen"),
+  parameters: ["currentDate": Date(), "pageNumber": 3])
+
+let userThree = User(name: "Nikola", analyticEvent: viewMainScreen)
+userThree.printAll()
+
+eventLogger.logEvent(buttonPressEvent)
+eventLogger.logEvent(fillSurveyEvent)
+eventLogger.logEvent(viewMainScreen)
+
+print("Stored logs: \(eventLogger.calledLogs)")
 
 
