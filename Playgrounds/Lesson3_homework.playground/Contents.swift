@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 // EventType protocol
 // Define an EventType protocol which allows you to read the name of EventType.
@@ -27,7 +27,7 @@ extension AnalyticEvent {
 // Implement at least two different structs that conform to AnalyticEvent, representing different types of events (e.g., ScreenViewEvent and UserActionEvent). Each should carry relevant data as parameters but having different types.
 
 struct UserActionEvent: AnalyticEvent {
-    typealias ItemType = UserActionEventType
+  typealias ItemType = UserActionEventType
     var type: ItemType
     var parameters: [String : Any] //{ ["buttonName": "enter", "isTapped": true] }
 }
@@ -38,12 +38,16 @@ struct ScreenViewEvent: AnalyticEvent {
     var parameters: [String : Any] // { ["screenTitle": "MainView", "pageNumber": 3] }
 }
 
+struct User: EventType {
+  var name: String
+}
+
 struct UserActionEventType: EventType {
-    var name: String { "Tap on button" }
+    var name: String // { "Tap on button" }
 }
 
 struct ScreenEventType: EventType {
-    var name: String { "Show view" }
+    var name: String // { "Show view" }
 }
 
 
@@ -64,16 +68,20 @@ struct LogEventsService: AnalyticsService {
     mutating func logEvent<T>(_ event: T) where T : AnalyticEvent {
         print(event.name)
         print(event.parameters)
-        calledLogs.append("Event name: \(event.name), parameters: \(event.parameters)")
+      calledLogs.append("Event name: \(event.name), parameters: \(event.parameters)")
     }
 }
 
-var eventLogger = LogEventsService()
-
-let buttonPressEvent = UserActionEvent(type: UserActionEventType(), parameters: ["buttonName": "Buy Now", "isTapped": true])
-eventLogger.logEvent(buttonPressEvent)
-print(buttonPressEvent)
 
 // Usage example:
 // Write a sample code using the designed API.
+
+var eventLogger = LogEventsService()
+
+let buttonPressEvent = UserActionEvent(type: UserActionEventType(name: "Tap on button"), parameters: ["buttonName": "Buy Now", "isTapped": true])
+eventLogger.logEvent(buttonPressEvent)
+print(buttonPressEvent)
+print(eventLogger.calledLogs)
+
+
 
