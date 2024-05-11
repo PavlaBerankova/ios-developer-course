@@ -12,6 +12,9 @@
 		4428D5152BDBAB91006C4AB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4428D5142BDBAB91006C4AB4 /* Assets.xcassets */; };
 		4428D5182BDBAB91006C4AB4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4428D5172BDBAB91006C4AB4 /* Preview Assets.xcassets */; };
 		443DF72C2BECB15B00B2B1C0 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443DF72B2BECB15B00B2B1C0 /* Configuration.swift */; };
+		4461F6BF2BEF962A00F784F6 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4461F6BC2BEF962A00F784F6 /* Poppins-Bold.ttf */; };
+		4461F6C02BEF962A00F784F6 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4461F6BD2BEF962A00F784F6 /* Poppins-Regular.ttf */; };
+		4461F6C12BEF962A00F784F6 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4461F6BE2BEF962A00F784F6 /* Poppins-MediumItalic.ttf */; };
 		446B55A22BECD3010089D0C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 446B55A12BECD3010089D0C4 /* GoogleService-Info.plist */; };
 		446B55A52BECD4D20089D0C4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 446B55A42BECD4D20089D0C4 /* FirebaseAuth */; };
 		446B55A72BECD4D20089D0C4 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 446B55A62BECD4D20089D0C4 /* FirebaseFirestore */; };
@@ -30,6 +33,9 @@
 		444815372BEB99330016FCC3 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		444815382BEB99460016FCC3 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		4448153D2BEBB6760016FCC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4461F6BC2BEF962A00F784F6 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "../../../../../../Desktop/CODE/iOSCourseRobotDreams/iOS_developer/Sources/Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		4461F6BD2BEF962A00F784F6 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../../../../../../Desktop/CODE/iOSCourseRobotDreams/iOS_developer/Sources/Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		4461F6BE2BEF962A00F784F6 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-MediumItalic.ttf"; path = "../../../../../../Desktop/CODE/iOSCourseRobotDreams/iOS_developer/Sources/Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		446B55A12BECD3010089D0C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		446B55AC2BECD7BA0089D0C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +76,7 @@
 		4428D50F2BDBAB90006C4AB4 /* CourseApp */ = {
 			isa = PBXGroup;
 			children = (
+				4461F6B82BEF959F00F784F6 /* Fonts */,
 				446B55A12BECD3010089D0C4 /* GoogleService-Info.plist */,
 				4448153D2BEBB6760016FCC3 /* Info.plist */,
 				446B55AC2BECD7BA0089D0C4 /* AppDelegate.swift */,
@@ -96,6 +103,16 @@
 				444815382BEB99460016FCC3 /* Production.xcconfig */,
 			);
 			path = Configurations;
+			sourceTree = "<group>";
+		};
+		4461F6B82BEF959F00F784F6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4461F6BC2BEF962A00F784F6 /* Poppins-Bold.ttf */,
+				4461F6BE2BEF962A00F784F6 /* Poppins-MediumItalic.ttf */,
+				4461F6BD2BEF962A00F784F6 /* Poppins-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,8 +185,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4428D5182BDBAB91006C4AB4 /* Preview Assets.xcassets in Resources */,
+				4461F6C12BEF962A00F784F6 /* Poppins-MediumItalic.ttf in Resources */,
 				4428D5152BDBAB91006C4AB4 /* Assets.xcassets in Resources */,
 				446B55A22BECD3010089D0C4 /* GoogleService-Info.plist in Resources */,
+				4461F6BF2BEF962A00F784F6 /* Poppins-Bold.ttf in Resources */,
+				4461F6C02BEF962A00F784F6 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
