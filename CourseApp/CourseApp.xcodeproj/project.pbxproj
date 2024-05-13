@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4428D5112BDBAB90006C4AB4 /* CourseAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4428D5102BDBAB90006C4AB4 /* CourseAppApp.swift */; };
+		4428D5112BDBAB90006C4AB4 /* CourseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4428D5102BDBAB90006C4AB4 /* CourseApp.swift */; };
 		4428D5132BDBAB90006C4AB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4428D5122BDBAB90006C4AB4 /* ContentView.swift */; };
 		4428D5152BDBAB91006C4AB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4428D5142BDBAB91006C4AB4 /* Assets.xcassets */; };
 		4428D5182BDBAB91006C4AB4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4428D5172BDBAB91006C4AB4 /* Preview Assets.xcassets */; };
 		443DF72C2BECB15B00B2B1C0 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443DF72B2BECB15B00B2B1C0 /* Configuration.swift */; };
-		4461F6BF2BEF962A00F784F6 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4461F6BC2BEF962A00F784F6 /* Poppins-Bold.ttf */; };
-		4461F6C02BEF962A00F784F6 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4461F6BD2BEF962A00F784F6 /* Poppins-Regular.ttf */; };
-		4461F6C12BEF962A00F784F6 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4461F6BE2BEF962A00F784F6 /* Poppins-MediumItalic.ttf */; };
 		446B55A22BECD3010089D0C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 446B55A12BECD3010089D0C4 /* GoogleService-Info.plist */; };
 		446B55A52BECD4D20089D0C4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 446B55A42BECD4D20089D0C4 /* FirebaseAuth */; };
 		446B55A72BECD4D20089D0C4 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 446B55A62BECD4D20089D0C4 /* FirebaseFirestore */; };
 		446B55A92BECD4D20089D0C4 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 446B55A82BECD4D20089D0C4 /* FirebaseFirestoreCombine-Community */; };
 		446B55AB2BECD4D20089D0C4 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 446B55AA2BECD4D20089D0C4 /* FirebaseFirestoreSwift */; };
 		446B55AD2BECD7BA0089D0C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B55AC2BECD7BA0089D0C4 /* AppDelegate.swift */; };
+		44BD7E192BF284FE005033A4 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44BD7E162BF284FE005033A4 /* Poppins-Regular.ttf */; };
+		44BD7E1A2BF284FE005033A4 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44BD7E172BF284FE005033A4 /* Poppins-Bold.ttf */; };
+		44BD7E1B2BF284FE005033A4 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44BD7E182BF284FE005033A4 /* Poppins-MediumItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4428D50D2BDBAB90006C4AB4 /* Course App Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Course App Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4428D5102BDBAB90006C4AB4 /* CourseAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseAppApp.swift; sourceTree = "<group>"; };
+		4428D5102BDBAB90006C4AB4 /* CourseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseApp.swift; sourceTree = "<group>"; };
 		4428D5122BDBAB90006C4AB4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4428D5142BDBAB91006C4AB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4428D5172BDBAB91006C4AB4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -33,11 +33,11 @@
 		444815372BEB99330016FCC3 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		444815382BEB99460016FCC3 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		4448153D2BEBB6760016FCC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		4461F6BC2BEF962A00F784F6 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "../../../../../../Desktop/CODE/iOSCourseRobotDreams/iOS_developer/Sources/Poppins-Bold.ttf"; sourceTree = "<group>"; };
-		4461F6BD2BEF962A00F784F6 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../../../../../../Desktop/CODE/iOSCourseRobotDreams/iOS_developer/Sources/Poppins-Regular.ttf"; sourceTree = "<group>"; };
-		4461F6BE2BEF962A00F784F6 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-MediumItalic.ttf"; path = "../../../../../../Desktop/CODE/iOSCourseRobotDreams/iOS_developer/Sources/Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		446B55A12BECD3010089D0C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		446B55AC2BECD7BA0089D0C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		44BD7E162BF284FE005033A4 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		44BD7E172BF284FE005033A4 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		44BD7E182BF284FE005033A4 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 		4428D5042BDBAB90006C4AB4 = {
 			isa = PBXGroup;
 			children = (
-				4428D5102BDBAB90006C4AB4 /* CourseAppApp.swift */,
+				4428D5102BDBAB90006C4AB4 /* CourseApp.swift */,
 				444815362BEB98FC0016FCC3 /* Configurations */,
 				4428D50F2BDBAB90006C4AB4 /* CourseApp */,
 				4428D50E2BDBAB90006C4AB4 /* Products */,
@@ -76,7 +76,7 @@
 		4428D50F2BDBAB90006C4AB4 /* CourseApp */ = {
 			isa = PBXGroup;
 			children = (
-				4461F6B82BEF959F00F784F6 /* Fonts */,
+				44BD7E152BF284D0005033A4 /* Fonts */,
 				446B55A12BECD3010089D0C4 /* GoogleService-Info.plist */,
 				4448153D2BEBB6760016FCC3 /* Info.plist */,
 				446B55AC2BECD7BA0089D0C4 /* AppDelegate.swift */,
@@ -105,12 +105,12 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
-		4461F6B82BEF959F00F784F6 /* Fonts */ = {
+		44BD7E152BF284D0005033A4 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				4461F6BC2BEF962A00F784F6 /* Poppins-Bold.ttf */,
-				4461F6BE2BEF962A00F784F6 /* Poppins-MediumItalic.ttf */,
-				4461F6BD2BEF962A00F784F6 /* Poppins-Regular.ttf */,
+				44BD7E172BF284FE005033A4 /* Poppins-Bold.ttf */,
+				44BD7E182BF284FE005033A4 /* Poppins-MediumItalic.ttf */,
+				44BD7E162BF284FE005033A4 /* Poppins-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -185,11 +185,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4428D5182BDBAB91006C4AB4 /* Preview Assets.xcassets in Resources */,
-				4461F6C12BEF962A00F784F6 /* Poppins-MediumItalic.ttf in Resources */,
+				44BD7E1B2BF284FE005033A4 /* Poppins-MediumItalic.ttf in Resources */,
 				4428D5152BDBAB91006C4AB4 /* Assets.xcassets in Resources */,
+				44BD7E1A2BF284FE005033A4 /* Poppins-Bold.ttf in Resources */,
 				446B55A22BECD3010089D0C4 /* GoogleService-Info.plist in Resources */,
-				4461F6BF2BEF962A00F784F6 /* Poppins-Bold.ttf in Resources */,
-				4461F6C02BEF962A00F784F6 /* Poppins-Regular.ttf in Resources */,
+				44BD7E192BF284FE005033A4 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +203,7 @@
 				446B55AD2BECD7BA0089D0C4 /* AppDelegate.swift in Sources */,
 				443DF72C2BECB15B00B2B1C0 /* Configuration.swift in Sources */,
 				4428D5132BDBAB90006C4AB4 /* ContentView.swift in Sources */,
-				4428D5112BDBAB90006C4AB4 /* CourseAppApp.swift in Sources */,
+				4428D5112BDBAB90006C4AB4 /* CourseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
