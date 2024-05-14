@@ -29,6 +29,30 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "443ACBBE2BF3634F00E64A3F"
+               BuildableName = "Course AppUITests.xctest"
+               BlueprintName = "Course AppUITests"
+               ReferencedContainer = "container:CourseApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "443ACBCF2BF3636D00E64A3F"
+               BuildableName = "Course AppUnitTests.xctest"
+               BlueprintName = "Course AppUnitTests"
+               ReferencedContainer = "container:CourseApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Production - Debug"
