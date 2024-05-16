@@ -18,8 +18,8 @@ protocol AnalyticEvent {
 
 extension AnalyticEvent {
     var name: String {
-          return type.name
-      }
+        type.name
+    }
 }
 
 
@@ -27,7 +27,7 @@ extension AnalyticEvent {
 // Implement at least two different structs that conform to AnalyticEvent, representing different types of events (e.g., ScreenViewEvent and UserActionEvent). Each should carry relevant data as parameters but having different types.
 
 struct UserActionEvent: AnalyticEvent {
-  typealias ItemType = UserActionEventType
+    typealias ItemType = UserActionEventType
     var type: ItemType
     var parameters: [String : Any]
 }
@@ -51,20 +51,20 @@ struct ScreenEventType: EventType {
 // Create a protocol named AnalyticsService with a single generic method logEvent(_: ). This method should accept any type conforming to AnalyticEvent.
 
 protocol AnalyticsService {
-   mutating func logEvent<T: AnalyticEvent>(_ event: T)
+    func logEvent<T: AnalyticEvent>(_ event: T)
 }
 
 
 // Analytics Service Implementations:
 // Implement at least one concrete analytics service that conforms to AnalyticsService. For simplicity, this service can log events to the console with print. The service should also store all called logs into the array.
 
-struct LogEventsService: AnalyticsService {
-    var calledLogs: [String] = []
+class LogEventsService: AnalyticsService {
+    var calledLogs: [any AnalyticEvent] = []
 
-    mutating func logEvent<T>(_ event: T) where T : AnalyticEvent {
+    func logEvent<T>(_ event: T) where T : AnalyticEvent {
         print(event.name)
         print(event.parameters)
-      calledLogs.append("Event name: \(event.name), parameters: \(event.parameters)")
+        calledLogs.append(event)
     }
 }
 
@@ -77,21 +77,21 @@ struct User {
     var analyticEvent: any AnalyticEvent
 
     func printAll() {
-      print("User \(name) has taken an action: \(analyticEvent.name), with these parameters: \(analyticEvent.parameters)")
+        print("User \(name) has taken an action: \(analyticEvent.name), with these parameters: \(analyticEvent.parameters)")
     }
 }
 
 var eventLogger = LogEventsService()
 
 let buttonPressEvent = UserActionEvent(
-  type: UserActionEventType(
-    name: "Tapped on Button"),
-  parameters: ["buttonName": "Buy Now", "isTapped": true])
+    type: UserActionEventType(
+        name: "Tapped on Button"),
+    parameters: ["buttonName": "Buy Now", "isTapped": true])
 
 let fillSurveyEvent = UserActionEvent(
-  type: UserActionEventType(
-    name: "Filled Survey"),
-  parameters: ["surveyTitle": "Satisfaction Survey", "allFilledIn": false])
+    type: UserActionEventType(
+        name: "Filled Survey"),
+    parameters: ["surveyTitle": "Satisfaction Survey", "allFilledIn": false])
 
 let userOne = User(name: "Pavla", analyticEvent: buttonPressEvent)
 userOne.printAll()
@@ -103,9 +103,9 @@ userTwo.printAll()
 // Screen View Event
 
 let viewMainScreen = ScreenViewEvent(
-  type: ScreenEventType(
-    name: "View Main Screen"),
-  parameters: ["currentDate": Date(), "pageNumber": 3])
+    type: ScreenEventType(
+        name: "View Main Screen"),
+    parameters: ["currentDate": Date(), "pageNumber": 3])
 
 let userThree = User(name: "Nikola", analyticEvent: viewMainScreen)
 userThree.printAll()
