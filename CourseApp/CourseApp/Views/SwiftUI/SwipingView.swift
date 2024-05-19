@@ -19,7 +19,13 @@ struct SwipingView: View {
                     if !dataProvider.data.isEmpty, let jokes = dataProvider.data.first?.jokes {
                         ZStack {
                             ForEach(jokes, id: \.self) { joke in
-                                Image(uiImage: joke.image!)
+                                SwipingCard(
+                                    configuration: SwipingCard.Configuration(
+                                        image: Image(uiImage: joke.image!),
+                                        title: "Category",
+                                        description: joke.text), 
+                                    swipeStateAction: { print($0) }
+                                )
                             }
                         }
                         .padding(.top, geometry.size.height / 20)
