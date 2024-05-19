@@ -20,11 +20,14 @@ struct HomeViewSwiftUI: View {
                 Section {
                     VStack {
                         ForEach(section.jokes) { joke in
-                            Image(uiImage: joke.image ?? UIImage())
-                                .resizableBordered(cornerRadius: 10)
-                                .onTapGesture {
-                                    print("Tapped joke \(joke)")
-                                }
+                            ZStack(alignment: .bottomLeading) {
+                                Image(uiImage: joke.image ?? UIImage())
+                                    .resizableBordered(cornerRadius: 10)
+                                    .onTapGesture {
+                                        print("Tapped joke \(joke)")
+                                    }
+                                imagePanel
+                            }
                         }
                     }
                     .background(.bg)
@@ -41,6 +44,24 @@ struct HomeViewSwiftUI: View {
         .listStyle(.plain)
         .scrollContentBackground(.hidden)
         .background(.bg)
+    }
+
+    private var imagePanel: some View {
+        HStack {
+            Text("Text")
+                .foregroundStyle(.white)
+
+            Spacer()
+
+            Button {
+                print("Tapped button")
+            } label: {
+                Image(systemName: "heart")
+                    .foregroundColor(.white)
+            }
+            .buttonStyle(SelectableButtonStyle(isSelected: .constant(true), color: .gray))
+        }
+        .padding(5)
     }
 }
 
