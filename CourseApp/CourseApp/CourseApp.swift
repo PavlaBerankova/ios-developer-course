@@ -27,7 +27,8 @@ struct CourseApp: App {
         if isUIKit {
             HomeView()
         } else {
-            HomeViewSwiftUI()
+            // HomeViewSwiftUI()
+            SwipingView()
         }
     }
 }
