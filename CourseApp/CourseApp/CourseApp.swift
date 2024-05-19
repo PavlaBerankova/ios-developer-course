@@ -12,7 +12,7 @@ struct CourseApp: App {
     // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     private var logger = Logger()
-    private var isUIKit = true
+    private var isUIKit = false
 
     var body: some Scene {
         WindowGroup {
@@ -27,7 +27,7 @@ struct CourseApp: App {
         if isUIKit {
             HomeView()
         } else {
-            // HomeViewSwiftUI()
+            HomeViewSwiftUI()
         }
     }
 }
