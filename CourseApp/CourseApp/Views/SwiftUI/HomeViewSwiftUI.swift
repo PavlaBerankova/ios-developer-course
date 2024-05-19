@@ -21,9 +21,7 @@ struct HomeViewSwiftUI: View {
                     VStack {
                         ForEach(section.jokes) { joke in
                             Image(uiImage: joke.image ?? UIImage())
-                                .resizable()
-                                .scaledToFill()
-                                .cornerRadius(10)
+                                .resizableBordered(cornerRadius: 10)
                                 .onTapGesture {
                                     print("Tapped joke \(joke)")
                                 }
