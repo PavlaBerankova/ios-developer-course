@@ -23,7 +23,8 @@ struct SwipingView: View {
                                     configuration: SwipingCard.Configuration(
                                         image: Image(uiImage: joke.image!),
                                         title: "Category",
-                                        description: joke.text), 
+                                        description: joke.text
+                                    ),
                                     swipeStateAction: { print($0) }
                                 )
                             }

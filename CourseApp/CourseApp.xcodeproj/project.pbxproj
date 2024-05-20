@@ -24,6 +24,7 @@
 		446B55A92BECD4D20089D0C4 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 446B55A82BECD4D20089D0C4 /* FirebaseFirestoreCombine-Community */; };
 		446B55AB2BECD4D20089D0C4 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 446B55AA2BECD4D20089D0C4 /* FirebaseFirestoreSwift */; };
 		446B55AD2BECD7BA0089D0C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B55AC2BECD7BA0089D0C4 /* AppDelegate.swift */; };
+		44BBFAD42BFB562400D3DF2F /* SwipingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBFAD32BFB562400D3DF2F /* SwipingCard.swift */; };
 		44BD7E192BF284FE005033A4 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44BD7E162BF284FE005033A4 /* Poppins-Regular.ttf */; };
 		44BD7E1A2BF284FE005033A4 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44BD7E172BF284FE005033A4 /* Poppins-Bold.ttf */; };
 		44BD7E1B2BF284FE005033A4 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44BD7E182BF284FE005033A4 /* Poppins-MediumItalic.ttf */; };
@@ -34,7 +35,6 @@
 		44DD47F92BFA015300F36B1C /* ResizableBordered.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DD47F82BFA015300F36B1C /* ResizableBordered.swift */; };
 		44DD47FC2BFA049000F36B1C /* SelectableButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DD47FB2BFA049000F36B1C /* SelectableButtonStyle.swift */; };
 		44DD47FE2BFA0CD100F36B1C /* SwipingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DD47FD2BFA0CD100F36B1C /* SwipingView.swift */; };
-		44DD48002BFA10D300F36B1C /* SwipingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DD47FF2BFA10D300F36B1C /* SwipingCard.swift */; };
 		44F8150E2BF7406E002A01D1 /* MockDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F8150D2BF7406E002A01D1 /* MockDataProvider.swift */; };
 		44F815142BF7430E002A01D1 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F815132BF7430E002A01D1 /* ImageCollectionViewCell.swift */; };
 		44F815162BF74329002A01D1 /* LabelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F815152BF74329002A01D1 /* LabelCollectionViewCell.swift */; };
@@ -80,6 +80,7 @@
 		4463B0D42BF63EAF00004353 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		446B55A12BECD3010089D0C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		446B55AC2BECD7BA0089D0C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		44BBFAD32BFB562400D3DF2F /* SwipingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingCard.swift; sourceTree = "<group>"; };
 		44BD7E162BF284FE005033A4 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		44BD7E172BF284FE005033A4 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		44BD7E182BF284FE005033A4 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
@@ -90,7 +91,6 @@
 		44DD47F82BFA015300F36B1C /* ResizableBordered.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableBordered.swift; sourceTree = "<group>"; };
 		44DD47FB2BFA049000F36B1C /* SelectableButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableButtonStyle.swift; sourceTree = "<group>"; };
 		44DD47FD2BFA0CD100F36B1C /* SwipingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingView.swift; sourceTree = "<group>"; };
-		44DD47FF2BFA10D300F36B1C /* SwipingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingCard.swift; sourceTree = "<group>"; };
 		44F8150D2BF7406E002A01D1 /* MockDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataProvider.swift; sourceTree = "<group>"; };
 		44F815132BF7430E002A01D1 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		44F815152BF74329002A01D1 /* LabelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -289,7 +289,7 @@
 				4428D5122BDBAB90006C4AB4 /* ContentView.swift */,
 				44DD47F22BF8ADE700F36B1C /* HomeViewSwiftUI.swift */,
 				44DD47FD2BFA0CD100F36B1C /* SwipingView.swift */,
-				44DD47FF2BFA10D300F36B1C /* SwipingCard.swift */,
+				44BBFAD32BFB562400D3DF2F /* SwipingCard.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -472,12 +472,12 @@
 				44F815162BF74329002A01D1 /* LabelCollectionViewCell.swift in Sources */,
 				443DF72C2BECB15B00B2B1C0 /* BuildConfiguration.swift in Sources */,
 				44DD47FC2BFA049000F36B1C /* SelectableButtonStyle.swift in Sources */,
+				44BBFAD42BFB562400D3DF2F /* SwipingCard.swift in Sources */,
 				44CA0AF72BF73E1C00B9E40E /* UICollectionView+ReusableIdentifier.swift in Sources */,
 				443B910F2BF7570900829CAA /* HomeView+Helper.swift in Sources */,
 				44F8151B2BF749D5002A01D1 /* HomeViewController.swift in Sources */,
 				4428D5132BDBAB90006C4AB4 /* ContentView.swift in Sources */,
 				4428D5112BDBAB90006C4AB4 /* CourseApp.swift in Sources */,
-				44DD48002BFA10D300F36B1C /* SwipingCard.swift in Sources */,
 				44DD47F72BF9FEE800F36B1C /* BorderedModifiers.swift in Sources */,
 				44CA0AF52BF73E0900B9E40E /* ReusableIdentifier.swift in Sources */,
 				44DD47F32BF8ADE700F36B1C /* HomeViewSwiftUI.swift in Sources */,

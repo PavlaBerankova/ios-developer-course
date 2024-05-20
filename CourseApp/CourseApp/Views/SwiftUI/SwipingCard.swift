@@ -1,8 +1,8 @@
 //
-//  SwipingCardView.swift
+//  SwipingCard.swift
 //  CourseApp
 //
-//  Created by Pavla Beránková on 19.05.2024.
+//  Created by Pavla Beránková on 20.05.2024.
 //
 
 import SwiftUI
@@ -67,6 +67,25 @@ struct SwipingCard: View {
         }
         .background(color)
         .cornerRadius(15)
+        .offset(x: offset.width, y: offset.height * 0.5)
+        .rotationEffect(.degrees(Double(offset.width / 40)))
+        .gesture(dragGesture)
+    }
+
+    // MARK: - Drag gesture
+    private var dragGesture: some Gesture {
+        DragGesture()
+            .onChanged { gesture in
+                offset = gesture.translation
+                withAnimation {
+                     // swiping(translation: offset
+                }
+            }
+            .onEnded { _ in
+                withAnimation {
+                     // finishSwipe(translation: offset
+                }
+            }
     }
 
     private var cardDescription: some View {
@@ -80,16 +99,23 @@ struct SwipingCard: View {
     }
 }
 
-struct Card_Previews: PreviewProvider {
-    static var previews: some View {
-        SwipingCard(
-            configuration: SwipingCard.Configuration(
-                image: Image("nature"),
-                title: "Card Title",
-                description: "This is a short description. This is a short description. This is a short descrtiption. This is a short description"),
-            swipeStateAction: { _ in }
-        )
+
+
+
+
+
+
+
+#Preview {
+    SwipingCard(
+        configuration: SwipingCard.Configuration(
+            image: Image("nature"),
+            title: "Card Title",
+            description: "This is a short description. This is a short description. This is a short descrtiption. This is a short description"),
+        swipeStateAction: { _ in }
+    )
         .previewLayout(.sizeThatFits)
         .frame(width: 220, height: 340)
-    }
 }
+
+
