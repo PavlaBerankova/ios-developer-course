@@ -78,12 +78,12 @@ struct SwipingCard: View {
             .onChanged { gesture in
                 offset = gesture.translation
                 withAnimation {
-                     // swiping(translation: offset
+                    swiping(translation: offset)
                 }
             }
             .onEnded { _ in
                 withAnimation {
-                     // finishSwipe(translation: offset
+                    finishSwipe(translation: offset)
                 }
             }
     }
@@ -96,6 +96,29 @@ struct SwipingCard: View {
             .background(Color.black.opacity(0.5))
             .cornerRadius(10)
             .padding()
+    }
+}
+
+// MARK: - Swipe logic
+private extension SwipingCard {
+    func finishSwipe(translation: CGSize) {
+        // swipe left
+        if -500...(-200) ~= translation.width {
+            offset = CGSize(width: -500, height: 0)
+            swipingAction(.finished(direction: .left))
+        } else if 200...500 ~= translation.width { // swipe right
+            offset = CGSize(width: 500, height: 0)
+            swipingAction(.finished(direction: .right))
+        } else {
+            // re-center
+            offset = .zero
+            color = .bg.opacity(0.7)
+            swipingAction(.cancelled)
+        }
+    }
+
+    func swiping(translation: CGSize) {
+
     }
 }
 
@@ -114,8 +137,8 @@ struct SwipingCard: View {
             description: "This is a short description. This is a short description. This is a short descrtiption. This is a short description"),
         swipeStateAction: { _ in }
     )
-        .previewLayout(.sizeThatFits)
-        .frame(width: 220, height: 340)
+    .previewLayout(.sizeThatFits)
+    .frame(width: 220, height: 340)
 }
 
 
