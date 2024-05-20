@@ -118,7 +118,20 @@ private extension SwipingCard {
     }
 
     func swiping(translation: CGSize) {
-
+        // swipe left
+        if translation.width < -60 {
+            color = .green
+                .opacity(Double(abs(translation.width) / 500) + 0.6)
+            swipingAction(.swiping(direction: .left))
+        } else if translation.width > 60 {
+            // swipe right
+            color = .red
+                .opacity(Double(translation.width / 500) + 0.6)
+            swipingAction(.swiping(direction: .right))
+        } else {
+            color = .bg.opacity(0.7)
+            swipingAction(.cancelled)
+        }
     }
 }
 
