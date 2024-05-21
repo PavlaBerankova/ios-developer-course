@@ -19,15 +19,15 @@ final class MainTabBarController: UITabBarController {
 
 // MARK: - UI Setup
 private extension MainTabBarController {
-    func setupTabBar() {
-        tabBar.backgroundImage = UIImage()
-        tabBar.shadowImage = UIImage()
-        tabBar.backgroundColor = .red
-        tabBar.tintColor = .blue
-    }
+//    func setupTabBar() {
+//        tabBar.backgroundImage = UIImage()
+//        tabBar.shadowImage = UIImage()
+//        tabBar.backgroundColor = .red
+//        tabBar.tintColor = .blue
+//    }
 
     func seteupGlobalTabBarUI() {
-        UITabBar.appearance().backgroundColor = .brown
+        UITabBar.appearance().backgroundColor = .purple
         UITabBar.appearance().tintColor = .white
     }
 
@@ -39,12 +39,12 @@ private extension MainTabBarController {
         let categoriesNavigationController = UINavigationController(rootViewController: HomeViewController())
         categoriesNavigationController.tabBarItem = UITabBarItem(
             title: "Categories",
-            image: UIImage(systemName: "list.dash.header.rectangle"),
+            image: UIImage(systemName: "rectangle.grid.1x2"),
             tag: 0
         )
 
         let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = .brown
+        appearance.backgroundColor = .purple
         appearance.shadowImage = UIImage()
 
         categoriesNavigationController.navigationBar.standardAppearance = appearance
@@ -58,9 +58,10 @@ private extension MainTabBarController {
         let swipingNavigationController = UINavigationController(rootViewController: UIHostingController(rootView: SwipingView()))
         swipingNavigationController.tabBarItem = UITabBarItem(
             title: "Random",
-            image: UIImage(systemName: "switch.2"),
+            image: UIImage(systemName: "arrow.2.squarepath"),
             tag: 1
         )
+
         return swipingNavigationController
     }
 }
