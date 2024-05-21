@@ -25,6 +25,7 @@
 		446B55AB2BECD4D20089D0C4 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 446B55AA2BECD4D20089D0C4 /* FirebaseFirestoreSwift */; };
 		446B55AD2BECD7BA0089D0C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B55AC2BECD7BA0089D0C4 /* AppDelegate.swift */; };
 		44B998462BFC8B4D006D33EA /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B998452BFC8B4D006D33EA /* DesignSystem.swift */; };
+		44B9984A2BFC98C4006D33EA /* TextTypeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B998492BFC98C4006D33EA /* TextTypeModifier.swift */; };
 		44BBFAD42BFB562400D3DF2F /* SwipingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBFAD32BFB562400D3DF2F /* SwipingCard.swift */; };
 		44BD7E192BF284FE005033A4 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44BD7E162BF284FE005033A4 /* Poppins-Regular.ttf */; };
 		44BD7E1A2BF284FE005033A4 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44BD7E172BF284FE005033A4 /* Poppins-Bold.ttf */; };
@@ -85,6 +86,7 @@
 		446B55A12BECD3010089D0C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		446B55AC2BECD7BA0089D0C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44B998452BFC8B4D006D33EA /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		44B998492BFC98C4006D33EA /* TextTypeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTypeModifier.swift; sourceTree = "<group>"; };
 		44BBFAD32BFB562400D3DF2F /* SwipingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingCard.swift; sourceTree = "<group>"; };
 		44BD7E162BF284FE005033A4 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		44BD7E172BF284FE005033A4 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
@@ -221,6 +223,25 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		44B998472BFC986B006D33EA /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				44F815192BF749D5002A01D1 /* HomeViewController.swift */,
+				44F8151A2BF749D5002A01D1 /* HomeViewController.xib */,
+				443B910E2BF7570900829CAA /* HomeView+Helper.swift */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		44B998482BFC9885006D33EA /* MainTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				44FF72172BFB7B8B00A3CB26 /* MainTabView+Helper.swift */,
+				44FF72152BFB780F00A3CB26 /* MainTabBarController.swift */,
+			);
+			path = MainTabBarController;
+			sourceTree = "<group>";
+		};
 		44BD7E152BF284D0005033A4 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +284,7 @@
 			children = (
 				44DD47F62BF9FEE800F36B1C /* BorderedModifiers.swift */,
 				44DD47F82BFA015300F36B1C /* ResizableBordered.swift */,
+				44B998492BFC98C4006D33EA /* TextTypeModifier.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -307,12 +329,9 @@
 		44F815112BF742D7002A01D1 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				443B910E2BF7570900829CAA /* HomeView+Helper.swift */,
-				44FF72172BFB7B8B00A3CB26 /* MainTabView+Helper.swift */,
+				44B998482BFC9885006D33EA /* MainTabBarController */,
+				44B998472BFC986B006D33EA /* HomeViewController */,
 				44F815122BF742E6002A01D1 /* UICollectionViewCells */,
-				44F815192BF749D5002A01D1 /* HomeViewController.swift */,
-				44F8151A2BF749D5002A01D1 /* HomeViewController.xib */,
-				44FF72152BFB780F00A3CB26 /* MainTabBarController.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -487,6 +506,7 @@
 				44F815162BF74329002A01D1 /* LabelCollectionViewCell.swift in Sources */,
 				443DF72C2BECB15B00B2B1C0 /* BuildConfiguration.swift in Sources */,
 				44DD47FC2BFA049000F36B1C /* SelectableButtonStyle.swift in Sources */,
+				44B9984A2BFC98C4006D33EA /* TextTypeModifier.swift in Sources */,
 				44BBFAD42BFB562400D3DF2F /* SwipingCard.swift in Sources */,
 				44CA0AF72BF73E1C00B9E40E /* UICollectionView+ReusableIdentifier.swift in Sources */,
 				443B910F2BF7570900829CAA /* HomeView+Helper.swift in Sources */,

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainTabView: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> MainTabBarController {
-       MainTabBarController()
+        MainTabBarController()
     }
 
     func updateUIViewController(_ uiViewController: MainTabBarController, context: Context) { }
