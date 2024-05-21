@@ -23,6 +23,7 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        title = "Categories"
     }
 }
 

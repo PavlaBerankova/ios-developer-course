@@ -5,18 +5,24 @@
 //  Created by Pavla Beránková on 17.05.2024.
 //
 
+import os
+import SwiftUI
 import UIKit
 
-final class HorizontalScrollingCollectionViewCell: UICollectionViewCell, ReusableIdentifier {
+final class HorizontalScrollingCollectionViewCell: UICollectionViewCell {
     // MARK: UI items
     private var collectionView: UICollectionView!
     var images = [UIImage?]()
+
+//    // MARK: - Data
+//    private var data: [Joke] = []
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
     }
 
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -41,7 +47,7 @@ private extension HorizontalScrollingCollectionViewCell {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(ImageCollectionViewCell.self)
+        collectionView.register(UICollectionViewCell.self)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
     }
 
@@ -65,8 +71,15 @@ extension HorizontalScrollingCollectionViewCell: UICollectionViewDataSource, UIC
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(for: indexPath) as ImageCollectionViewCell
-        cell.imageView.image = images[indexPath.item]
+//        let cell = collectionView.dequeueReusableCell(for: indexPath) as ImageCollectionViewCell
+//        cell.imageView.image = images[indexPath.item]
+//        return cell
+
+        let cell: UICollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+        cell.contentConfiguration = UIHostingConfiguration {
+            Image(uiImage: images[indexPath.row] ?? UIImage())
+                .resizableBordered(cornerRadius: 10)
+        }
         return cell
     }
 
@@ -77,3 +90,5 @@ extension HorizontalScrollingCollectionViewCell: UICollectionViewDataSource, UIC
 
 extension HorizontalScrollingCollectionViewCell: UICollectionViewDelegate {
 }
+
+extension UICollectionViewCell: ReusableIdentifier { }

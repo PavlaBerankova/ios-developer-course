@@ -12,22 +12,14 @@ struct CourseApp: App {
     // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     private var logger = Logger()
-    private var isUIKit = false
 
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                homeView
-            }
-        }
-    }
-
-    @ViewBuilder
-    var homeView: some View {
-        if isUIKit {
-            HomeView()
-        } else {
-            SwipingView()
+            MainTabView()
+                .ignoresSafeArea(edges: .all)
+                .onAppear {
+                    logger.info("Content view has appeared")
+                }
         }
     }
 }

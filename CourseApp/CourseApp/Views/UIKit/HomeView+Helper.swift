@@ -12,6 +12,5 @@ struct HomeView: UIViewControllerRepresentable {
         HomeViewController()
     }
 
-    func updateUIViewController(_ uiViewController: HomeViewController, context: Context) {
-    }
+    func updateUIViewController(_ uiViewController: HomeViewController, context: Context) { }
 }

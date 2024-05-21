@@ -24,6 +24,7 @@
 		446B55A92BECD4D20089D0C4 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 446B55A82BECD4D20089D0C4 /* FirebaseFirestoreCombine-Community */; };
 		446B55AB2BECD4D20089D0C4 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 446B55AA2BECD4D20089D0C4 /* FirebaseFirestoreSwift */; };
 		446B55AD2BECD7BA0089D0C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B55AC2BECD7BA0089D0C4 /* AppDelegate.swift */; };
+		44B998462BFC8B4D006D33EA /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B998452BFC8B4D006D33EA /* DesignSystem.swift */; };
 		44BBFAD42BFB562400D3DF2F /* SwipingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BBFAD32BFB562400D3DF2F /* SwipingCard.swift */; };
 		44BD7E192BF284FE005033A4 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44BD7E162BF284FE005033A4 /* Poppins-Regular.ttf */; };
 		44BD7E1A2BF284FE005033A4 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44BD7E172BF284FE005033A4 /* Poppins-Bold.ttf */; };
@@ -42,6 +43,8 @@
 		44F8151B2BF749D5002A01D1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F815192BF749D5002A01D1 /* HomeViewController.swift */; };
 		44F8151C2BF749D5002A01D1 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44F8151A2BF749D5002A01D1 /* HomeViewController.xib */; };
 		44FF72142BFB6AF100A3CB26 /* ScratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FF72132BFB6AF100A3CB26 /* ScratchView.swift */; };
+		44FF72162BFB780F00A3CB26 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FF72152BFB780F00A3CB26 /* MainTabBarController.swift */; };
+		44FF72182BFB7B8B00A3CB26 /* MainTabView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FF72172BFB7B8B00A3CB26 /* MainTabView+Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,7 @@
 		4463B0D42BF63EAF00004353 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		446B55A12BECD3010089D0C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		446B55AC2BECD7BA0089D0C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		44B998452BFC8B4D006D33EA /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 		44BBFAD32BFB562400D3DF2F /* SwipingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingCard.swift; sourceTree = "<group>"; };
 		44BD7E162BF284FE005033A4 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		44BD7E172BF284FE005033A4 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 		44F815192BF749D5002A01D1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		44F8151A2BF749D5002A01D1 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		44FF72132BFB6AF100A3CB26 /* ScratchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchView.swift; sourceTree = "<group>"; };
+		44FF72152BFB780F00A3CB26 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		44FF72172BFB7B8B00A3CB26 /* MainTabView+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainTabView+Helper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +253,7 @@
 			children = (
 				44DD47FA2BFA047A00F36B1C /* Styles */,
 				44DD47F52BF9FEAE00F36B1C /* ViewModifiers */,
+				44B998452BFC8B4D006D33EA /* DesignSystem.swift */,
 			);
 			path = SharedUI;
 			sourceTree = "<group>";
@@ -301,9 +308,11 @@
 			isa = PBXGroup;
 			children = (
 				443B910E2BF7570900829CAA /* HomeView+Helper.swift */,
+				44FF72172BFB7B8B00A3CB26 /* MainTabView+Helper.swift */,
 				44F815122BF742E6002A01D1 /* UICollectionViewCells */,
 				44F815192BF749D5002A01D1 /* HomeViewController.swift */,
 				44F8151A2BF749D5002A01D1 /* HomeViewController.xib */,
+				44FF72152BFB780F00A3CB26 /* MainTabBarController.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -467,7 +476,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				44F8150E2BF7406E002A01D1 /* MockDataProvider.swift in Sources */,
+				44FF72182BFB7B8B00A3CB26 /* MainTabView+Helper.swift in Sources */,
 				44DD47F92BFA015300F36B1C /* ResizableBordered.swift in Sources */,
+				44FF72162BFB780F00A3CB26 /* MainTabBarController.swift in Sources */,
 				446B55AD2BECD7BA0089D0C4 /* AppDelegate.swift in Sources */,
 				44DD47FE2BFA0CD100F36B1C /* SwipingView.swift in Sources */,
 				44F815182BF74348002A01D1 /* HorizontalScrollingCollectionViewCell.swift in Sources */,
@@ -482,6 +493,7 @@
 				44F8151B2BF749D5002A01D1 /* HomeViewController.swift in Sources */,
 				4428D5132BDBAB90006C4AB4 /* ContentView.swift in Sources */,
 				4428D5112BDBAB90006C4AB4 /* CourseApp.swift in Sources */,
+				44B998462BFC8B4D006D33EA /* DesignSystem.swift in Sources */,
 				44DD47F72BF9FEE800F36B1C /* BorderedModifiers.swift in Sources */,
 				44CA0AF52BF73E0900B9E40E /* ReusableIdentifier.swift in Sources */,
 				44DD47F32BF8ADE700F36B1C /* HomeViewSwiftUI.swift in Sources */,

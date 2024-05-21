@@ -94,8 +94,7 @@ struct SwipingCard: View {
 
     private var cardDescription: some View {
         Text(configuration.title)
-            .foregroundStyle(.white)
-            .fontWeight(.bold)
+            .textTypeModifier(textType: .h1Title)
             .padding(10)
             .background(Color.black.opacity(0.5))
             .cornerRadius(10)

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ImageCollectionViewCell: UICollectionViewCell, ReusableIdentifier {
+final class ImageCollectionViewCell: UICollectionViewCell {
     // MARK: UI items
     let imageView: UIImageView = {
         let imageView = UIImageView()
