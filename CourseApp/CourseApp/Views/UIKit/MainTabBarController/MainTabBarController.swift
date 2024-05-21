@@ -12,23 +12,31 @@ final class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         seteupGlobalTabBarUI()
-       // setupTabBar()
+        // setupTabBar()
         setupTabBarController()
     }
 }
 
 // MARK: - UI Setup
 private extension MainTabBarController {
-//    func setupTabBar() {
-//        tabBar.backgroundImage = UIImage()
-//        tabBar.shadowImage = UIImage()
-//        tabBar.backgroundColor = .red
-//        tabBar.tintColor = .blue
-//    }
+    //    func setupTabBar() {
+    //        tabBar.backgroundImage = UIImage()
+    //        tabBar.shadowImage = UIImage()
+    //        tabBar.backgroundColor = .red
+    //        tabBar.tintColor = .blue
+    //    }
 
     func seteupGlobalTabBarUI() {
-        UITabBar.appearance().backgroundColor = .purple
-        UITabBar.appearance().tintColor = .white
+        let tabBarAppearance = UITabBarAppearance()
+        UITabBar.appearance().backgroundColor = .accent
+
+        tabBarAppearance.stackedLayoutAppearance.normal.iconColor = UIColor.gray
+        tabBarAppearance.stackedLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.gray]
+
+        tabBarAppearance.stackedLayoutAppearance.selected.iconColor = UIColor.black
+        tabBarAppearance.stackedLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+
+        tabBar.standardAppearance = tabBarAppearance
     }
 
     func setupTabBarController() {
@@ -44,8 +52,10 @@ private extension MainTabBarController {
         )
 
         let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = .purple
+        appearance.backgroundColor = .accent
         appearance.shadowImage = UIImage()
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.black]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
 
         categoriesNavigationController.navigationBar.standardAppearance = appearance
         categoriesNavigationController.navigationBar.compactAppearance = appearance
