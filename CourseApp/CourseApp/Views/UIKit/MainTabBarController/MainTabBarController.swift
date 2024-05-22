@@ -52,6 +52,7 @@ private extension MainTabBarController {
         categoriesNavigationController.navigationBar.standardAppearance = appearance
         categoriesNavigationController.navigationBar.compactAppearance = appearance
         categoriesNavigationController.navigationBar.scrollEdgeAppearance = appearance
+        categoriesNavigationController.topViewController?.title = "Categories"
 
         return categoriesNavigationController
     }
@@ -64,6 +65,8 @@ private extension MainTabBarController {
             tag: 1
         )
 
+     
+
 
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = .accent
@@ -74,6 +77,7 @@ private extension MainTabBarController {
         swipingNavigationController.navigationBar.standardAppearance = appearance
         swipingNavigationController.navigationBar.compactAppearance = appearance
         swipingNavigationController.navigationBar.scrollEdgeAppearance = appearance
+        swipingNavigationController.topViewController?.title = "Random"
 
         return swipingNavigationController
     }

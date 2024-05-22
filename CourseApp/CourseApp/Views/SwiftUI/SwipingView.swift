@@ -21,7 +21,7 @@ struct SwipingView: View {
                             ForEach(jokes, id: \.self) { joke in
                                 SwipingCard(
                                     configuration: SwipingCard.Configuration(
-                                        image: Image(uiImage: joke.image!),
+                                        image: Image(uiImage: joke.image ?? UIImage()),
                                         title: "Category",
                                         description: joke.text
                                     ),
@@ -41,6 +41,7 @@ struct SwipingView: View {
                 Spacer()
             }
         }
+        .background(Color.theme.backgroundColor)
     }
 }
 
