@@ -1,8 +1,8 @@
 //
-//  ResizableBordered.swift
+//  Image.swift
 //  CourseApp
 //
-//  Created by Pavla Beránková on 19.05.2024.
+//  Created by Pavla Beránková on 22.05.2024.
 //
 
 import SwiftUI

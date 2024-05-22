@@ -108,7 +108,7 @@ private extension HomeViewController {
         layout.scrollDirection = .vertical //Change this to vertical
         layout.minimumLineSpacing = 8 //Spacing here is not necessary, but adds a better inset for horizontal scrolling. Gives you a tiny peek of the background. Probably not great for vertical
         layout.minimumInteritemSpacing = 10
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 4, bottom: 0, right: 4)
+        layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         layout.sectionHeadersPinToVisibleBounds = true
         layout.headerReferenceSize = CGSize(width: categoriesCollectionView.contentSize.width, height: 30)
         layout.itemSize = CGSize(width: categoriesCollectionView.bounds.width, height: categoriesCollectionView.bounds.height / 3)
