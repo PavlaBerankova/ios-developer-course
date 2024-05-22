@@ -46,7 +46,8 @@ struct SwipingCard: View {
     @State private var color: Color = .black.opacity(0.7)
 
     init(configuration: Configuration,
-         swipeStateAction: @escaping (Action<SwipeState>)) {
+         swipeStateAction: @escaping (Action<SwipeState>)
+    ) {
         self.configuration = configuration
         self.swipingAction = swipeStateAction
     }

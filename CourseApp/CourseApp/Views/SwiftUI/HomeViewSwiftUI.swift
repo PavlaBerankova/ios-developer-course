@@ -7,8 +7,11 @@
 
 import SwiftUI
 
+// swiftlint:disable disable_print
 struct HomeViewSwiftUI: View {
-    @StateObject var dataProvider = MockDataProvider()
+    @StateObject private var dataProvider = MockDataProvider()
+    private let cornerRadius: CGFloat = 10
+    private let padding: CGFloat = 5
 
     var body: some View {
         #if DEBUG
@@ -22,7 +25,7 @@ struct HomeViewSwiftUI: View {
                         ForEach(section.jokes) { joke in
                             ZStack(alignment: .bottomLeading) {
                                 Image(uiImage: joke.image ?? UIImage())
-                                    .resizableBordered(cornerRadius: 10)
+                                    .resizableBordered(cornerRadius: cornerRadius)
                                     .onTapGesture {
                                         print("Tapped joke \(joke)")
                                     }
@@ -31,11 +34,11 @@ struct HomeViewSwiftUI: View {
                         }
                     }
                     .background(.bg)
-                    .padding([.leading, .trailing], 5)
+                    .padding([.leading, .trailing], padding)
                 } header: {
                     Text(section.title)
                         .foregroundColor(.white)
-                        .padding([.leading, .trailing], 5)
+                        .padding([.leading, .trailing], padding)
                 }
                 .background(.bg)
                 .listRowInsets(EdgeInsets())
@@ -61,9 +64,10 @@ struct HomeViewSwiftUI: View {
             }
             .buttonStyle(SelectableButtonStyle(isSelected: .constant(true), color: .gray))
         }
-        .padding(5)
+        .padding(padding)
     }
 }
+// swiftlint:enable disable_print
 
 #Preview {
     HomeViewSwiftUI()

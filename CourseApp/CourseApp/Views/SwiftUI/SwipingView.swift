@@ -7,8 +7,12 @@
 
 import SwiftUI
 
+// swiftlint:disable disable_print
 struct SwipingView: View {
     let dataProvider = MockDataProvider()
+    private let paddingTopRatio: CGFloat = 20
+    private let frameWidthRatio: CGFloat = 1.2
+    private let frameHeightRatio: CGFloat = 1.5
 
     var body: some View {
         GeometryReader { geometry in
@@ -29,8 +33,8 @@ struct SwipingView: View {
                                 )
                             }
                         }
-                        .padding(.top, geometry.size.height / 20)
-                        .frame(width: geometry.size.width / 1.2, height: (geometry.size.width / 1.2) * 1.5)
+                        .padding(.top, geometry.size.height / paddingTopRatio)
+                        .frame(width: geometry.size.width / frameWidthRatio, height: (geometry.size.width / frameWidthRatio) * frameHeightRatio)
                     } else {
                         Text("Empty data!")
                     }
@@ -44,6 +48,7 @@ struct SwipingView: View {
         .darkBackgroundColor()
     }
 }
+// swiftlint:enable disable_print
 
 #Preview {
     SwipingView()
