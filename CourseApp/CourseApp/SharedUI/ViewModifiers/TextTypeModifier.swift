@@ -13,7 +13,6 @@ struct TextTypeModifier: ViewModifier {
         content
             .font(textType.font)
             .foregroundColor(textType.color)
-
     }
 }
 

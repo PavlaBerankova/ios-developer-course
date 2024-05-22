@@ -16,6 +16,7 @@ final class LabelCollectionViewCell: UICollectionViewCell {
         setupUI()
     }
 
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -35,7 +36,7 @@ private extension LabelCollectionViewCell {
 
     func configureLabel() {
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        nameLabel.textColor = UIColor.uiTheme.labelColor
+        nameLabel.textColor = TextType.h2Title.uiColor
         nameLabel.font = TextType.h2Title.uiFont
     }
 

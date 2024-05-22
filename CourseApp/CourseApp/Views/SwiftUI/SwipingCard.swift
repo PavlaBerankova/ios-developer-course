@@ -138,23 +138,16 @@ private extension SwipingCard {
     }
 }
 
-
-
-
-
-
-
-
 #Preview {
     SwipingCard(
         configuration: SwipingCard.Configuration(
             image: Image("nature"),
             title: "Card Title",
-            description: "This is a short description. This is a short description. This is a short descrtiption. This is a short description"),
-        swipeStateAction: { _ in }
+            description: "This is a short description. This is a short description. This is a short descrtiption. This is a short description"
+        ),
+        swipeStateAction: { _ in
+        }
     )
     .previewLayout(.sizeThatFits)
     .frame(width: 220, height: 340)
 }
-
-

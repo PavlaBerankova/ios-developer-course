@@ -53,35 +53,37 @@ enum TextType {
     case h1Title
     case h2Title
     case h3Title
+    case navTitle
 
     var font: Font {
         switch self {
-        case .h1Title:
-                .bold(with: .size28)
-        case .h2Title:
-                .mediumItalic(with: .size20)
-        default:
-                .regular(with: .size12)
+        case .h1Title: .bold(with: .size28)
+        case .h2Title: .regular(with: .size20)
+        case.h3Title: .mediumItalic(with: .size12)
+        default: .regular(with: .size12)
         }
     }
 
     var uiFont: UIFont {
         switch self {
-        case .h1Title:
-                .bold(with: .size28)
-        case .h2Title:
-                .mediumItalic(with: .size20)
-        default:
-                .regular(with: .size12)
+        case .h1Title: .bold(with: .size28)
+        case .h2Title: .regular(with: .size20)
+        case .h3Title: .mediumItalic(with: .size12)
+        default: .regular(with: .size12)
         }
     }
 
     var color: Color {
         switch self {
-        case .h1Title:
-                .white
-        default:
-                .gray
+        case .h1Title, .h2Title, .h3Title: .white
+        case .navTitle: .black
+        }
+    }
+
+    var uiColor: UIColor {
+        switch self {
+        case .h1Title, .h2Title, .h3Title: .white
+        case .navTitle: .black
         }
     }
 }

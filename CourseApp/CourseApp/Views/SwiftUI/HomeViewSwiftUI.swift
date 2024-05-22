@@ -43,7 +43,7 @@ struct HomeViewSwiftUI: View {
         }
         .listStyle(.plain)
         .scrollContentBackground(.hidden)
-        .background(Color.theme.backgroundColor)
+        .darkBackgroundColor()
     }
 
     private var imagePanel: some View {

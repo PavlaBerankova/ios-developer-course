@@ -47,7 +47,7 @@ private extension MainTabBarController {
             )
         ]
     }
-    
+
     func setupViewController(rootViewController: UIViewController, title: String, imageName: String, tag: Int) -> UIViewController {
         let navigationController = UINavigationController(rootViewController: rootViewController)
         navigationController.tabBarItem = UITabBarItem(
@@ -59,8 +59,8 @@ private extension MainTabBarController {
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = .accent
         appearance.shadowImage = UIImage()
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.uiTheme.navBarText]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.uiTheme.navBarText]
+        appearance.titleTextAttributes = [.foregroundColor: TextType.navTitle.uiColor]
+        appearance.largeTitleTextAttributes = [.foregroundColor: TextType.navTitle.uiColor]
 
         navigationController.navigationBar.standardAppearance = appearance
         navigationController.navigationBar.compactAppearance = appearance

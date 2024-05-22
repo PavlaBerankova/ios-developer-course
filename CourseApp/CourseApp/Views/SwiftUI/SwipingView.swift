@@ -41,7 +41,7 @@ struct SwipingView: View {
                 Spacer()
             }
         }
-        .background(Color.theme.backgroundColor)
+        .darkBackgroundColor()
     }
 }
 

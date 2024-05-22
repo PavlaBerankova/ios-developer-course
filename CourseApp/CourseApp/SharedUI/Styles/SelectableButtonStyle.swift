@@ -21,6 +21,5 @@ struct SelectableButtonStyle: ButtonStyle {
             .animation(.easeInOut, value: isSelected)
             .animation(.easeInOut, value: configuration.isPressed)
             .contentShape(Rectangle())
-
     }
 }

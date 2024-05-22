@@ -28,10 +28,10 @@ struct ScratchView: View {
                 .scaledToFit()
 
             RoundedRectangle(cornerRadius: cornerRadius)
-                .fill(Color.theme.backgroundColor)
+                .fill(Color.bg)
                 .overlay {
                     Text(text)
-                        .foregroundStyle(.white)
+                        .textTypeModifier(textType: TextType.h3Title)
                         .multilineTextAlignment(.center)
                         .padding()
                 }
