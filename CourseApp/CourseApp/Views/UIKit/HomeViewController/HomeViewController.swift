@@ -9,6 +9,7 @@ import Combine
 import SwiftUI
 import UIKit
 
+// swiftlint:disable disable_print
 final class HomeViewController: UIViewController {
     @IBOutlet private var categoriesCollectionView: UICollectionView!
 
@@ -31,7 +32,7 @@ private extension HomeViewController {
     func readData() {
         dataProvider.$data.sink { [weak self] data in
             print(data)
-           self?.applySnapshot(data: data, animatingDifferences: true)
+            self?.applySnapshot(data: data, animatingDifferences: true)
         }
         .store(in: &cancellables)
     }
@@ -54,7 +55,7 @@ private extension HomeViewController {
     }
 
     func makeDataSource() -> DataSource {
-        let dataSource = DataSource(collectionView: categoriesCollectionView) { collectionView, indexPath, joke in
+        let dataSource = DataSource(collectionView: categoriesCollectionView) { collectionView, indexPath, _ in
             let section = self.dataSource.snapshot().sectionIdentifiers[indexPath.section]
 
             let horizontalCell: HorizontalScrollingCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
@@ -90,6 +91,13 @@ extension HomeViewController: UICollectionViewDelegate {
 
 // MARK: - UI setup
 private extension HomeViewController {
+    enum LayoutConstants {
+        static let minimumLineSpacing: CGFloat = 8
+        static let minimumInteritemSpacing: CGFloat = 10
+        static let edgeInsets: CGFloat = 5
+        static let headerReferenceHeight: CGFloat = 30
+    }
+
     func setup() {
         setupCollectionView()
         readData()
@@ -105,13 +113,27 @@ private extension HomeViewController {
         categoriesCollectionView.register(LabelCollectionViewCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader)
 
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical //Change this to vertical
-        layout.minimumLineSpacing = 8 //Spacing here is not necessary, but adds a better inset for horizontal scrolling. Gives you a tiny peek of the background. Probably not great for vertical
-        layout.minimumInteritemSpacing = 10
-        layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        let cellHeightRatio: CGFloat = 3.0
+
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = LayoutConstants.minimumLineSpacing
+        layout.minimumInteritemSpacing = LayoutConstants.minimumInteritemSpacing
+        layout.sectionInset = UIEdgeInsets(
+            top: LayoutConstants.edgeInsets,
+            left: LayoutConstants.edgeInsets,
+            bottom: LayoutConstants.edgeInsets,
+            right: LayoutConstants.edgeInsets
+        )
         layout.sectionHeadersPinToVisibleBounds = true
-        layout.headerReferenceSize = CGSize(width: categoriesCollectionView.contentSize.width, height: 30)
-        layout.itemSize = CGSize(width: categoriesCollectionView.bounds.width, height: categoriesCollectionView.bounds.height / 3)
+        layout.headerReferenceSize = CGSize(
+            width: categoriesCollectionView.contentSize.width,
+            height: LayoutConstants.headerReferenceHeight
+        )
+        layout.itemSize = CGSize(
+            width: categoriesCollectionView.bounds.width,
+            height: categoriesCollectionView.bounds.height / cellHeightRatio
+        )
         categoriesCollectionView.setCollectionViewLayout(layout, animated: false)
     }
 }
+// swiftlint:enable disable_print

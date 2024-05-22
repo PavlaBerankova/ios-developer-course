@@ -11,7 +11,7 @@ final class ImageCollectionViewCell: UICollectionViewCell {
     // MARK: UI items
     let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.layer.cornerRadius = 10
+        imageView.layer.cornerRadius = Constants.cornerRadius
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -23,6 +23,7 @@ final class ImageCollectionViewCell: UICollectionViewCell {
         setupUI()
     }
 
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -41,10 +42,17 @@ private extension ImageCollectionViewCell {
 
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
-            imageView.topAnchor.constraint(equalTo: topAnchor, constant: 5),
-            imageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.edgeInsets),
+            imageView.topAnchor.constraint(equalTo: topAnchor, constant: Constants.edgeInsets),
+            imageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Constants.edgeInsets),
+            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Constants.edgeInsets),
         ])
+    }
+}
+
+private extension ImageCollectionViewCell {
+    enum Constants {
+        static let cornerRadius: CGFloat = 10
+        static let edgeInsets: CGFloat = 5
     }
 }

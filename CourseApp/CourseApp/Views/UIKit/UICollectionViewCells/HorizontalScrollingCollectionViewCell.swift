@@ -10,16 +10,25 @@ import SwiftUI
 import UIKit
 
 final class HorizontalScrollingCollectionViewCell: UICollectionViewCell {
-    // MARK: UI items
-    private var collectionView: UICollectionView!
+    private var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = Constants.layoutMinimumLineSpacing
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .clear
+        collectionView.isPagingEnabled = true
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return collectionView
+    }()
+
     var images = [UIImage?]()
 
-//    // MARK: - Data
-//    private var data: [Joke] = []
-
+    //    // MARK: - Data
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
+        setupCollectionView()
     }
 
     @available(*, unavailable)
@@ -30,6 +39,15 @@ final class HorizontalScrollingCollectionViewCell: UICollectionViewCell {
 
 // MARK: - SETUP UI
 private extension HorizontalScrollingCollectionViewCell {
+    enum Constants {
+        static let layoutMinimumLineSpacing: CGFloat = 5
+        static let constraintsTop: CGFloat = 10
+        static let constraintsBottom: CGFloat = 0
+        static let constraintsLeading: CGFloat = 0
+        static let constraintsTrailing: CGFloat = 0
+        static let cornerRadius: CGFloat = 10
+    }
+
     func setupUI() {
         setupCollectionView()
         addSubviews()
@@ -37,18 +55,9 @@ private extension HorizontalScrollingCollectionViewCell {
     }
 
     func setupCollectionView() {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 5
-
-        self.collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .clear
-        collectionView.isPagingEnabled = true
-        collectionView.showsHorizontalScrollIndicator = false
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
     }
 
     func addSubviews() {
@@ -57,10 +66,10 @@ private extension HorizontalScrollingCollectionViewCell {
 
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
-            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
-            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
+            collectionView.topAnchor.constraint(equalTo: topAnchor, constant: Constants.constraintsTop),
+            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: Constants.constraintsBottom),
+            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.constraintsLeading),
+            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Constants.constraintsTrailing),
         ])
     }
 }
@@ -71,14 +80,10 @@ extension HorizontalScrollingCollectionViewCell: UICollectionViewDataSource, UIC
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(for: indexPath) as ImageCollectionViewCell
-//        cell.imageView.image = images[indexPath.item]
-//        return cell
-
         let cell: UICollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.contentConfiguration = UIHostingConfiguration {
             Image(uiImage: images[indexPath.row] ?? UIImage())
-                .resizableBordered(cornerRadius: 10)
+                .resizableBordered(cornerRadius: Constants.cornerRadius)
         }
         return cell
     }

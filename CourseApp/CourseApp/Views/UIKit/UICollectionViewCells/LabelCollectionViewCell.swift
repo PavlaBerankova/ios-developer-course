@@ -24,6 +24,12 @@ final class LabelCollectionViewCell: UICollectionViewCell {
 
 // MARK: - Setup UI
 private extension LabelCollectionViewCell {
+    enum Constants {
+        static let padding: CGFloat = 5
+        static let labelFont: UIFont = TextType.h2Title.uiFont
+        static let labelColor: UIColor = TextType.h2Title.uiColor
+    }
+
     func setupUI() {
         addSubviews()
         configureLabel()
@@ -36,16 +42,16 @@ private extension LabelCollectionViewCell {
 
     func configureLabel() {
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        nameLabel.textColor = TextType.h2Title.uiColor
-        nameLabel.font = TextType.h2Title.uiFont
+        nameLabel.textColor = Constants.labelColor
+        nameLabel.font = Constants.labelFont
     }
 
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
-            nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 5),
-            nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
-            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
+            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.padding),
+            nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: Constants.padding),
+            nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Constants.padding),
+            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Constants.padding),
         ])
     }
 }
