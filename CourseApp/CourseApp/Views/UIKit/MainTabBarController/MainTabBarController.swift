@@ -32,15 +32,28 @@ private extension MainTabBarController {
     }
 
     func setupTabBarController() {
-        viewControllers = [setupCategoriesView(), setupSwipingView()]
+        viewControllers = [
+            setupViewController(
+                rootViewController: HomeViewController(),
+                title: "Categories",
+                imageName: "rectangle.grid.1x2",
+                tag: 0
+            ),
+            setupViewController(
+                rootViewController: UIHostingController(rootView: SwipingView()),
+                title: "Random",
+                imageName: "arrow.2.squarepath",
+                tag: 1
+            )
+        ]
     }
-
-    func setupCategoriesView() -> UIViewController {
-        let categoriesNavigationController = UINavigationController(rootViewController: HomeViewController())
-        categoriesNavigationController.tabBarItem = UITabBarItem(
-            title: "Categories",
-            image: UIImage(systemName: "rectangle.grid.1x2"),
-            tag: 0
+    
+    func setupViewController(rootViewController: UIViewController, title: String, imageName: String, tag: Int) -> UIViewController {
+        let navigationController = UINavigationController(rootViewController: rootViewController)
+        navigationController.tabBarItem = UITabBarItem(
+            title: title,
+            image: UIImage(systemName: imageName),
+            tag: tag
         )
 
         let appearance = UINavigationBarAppearance()
@@ -49,36 +62,11 @@ private extension MainTabBarController {
         appearance.titleTextAttributes = [.foregroundColor: UIColor.uiTheme.navBarText]
         appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.uiTheme.navBarText]
 
-        categoriesNavigationController.navigationBar.standardAppearance = appearance
-        categoriesNavigationController.navigationBar.compactAppearance = appearance
-        categoriesNavigationController.navigationBar.scrollEdgeAppearance = appearance
-        categoriesNavigationController.topViewController?.title = "Categories"
+        navigationController.navigationBar.standardAppearance = appearance
+        navigationController.navigationBar.compactAppearance = appearance
+        navigationController.navigationBar.scrollEdgeAppearance = appearance
+        navigationController.topViewController?.title = title
 
-        return categoriesNavigationController
-    }
-
-    func setupSwipingView() -> UIViewController {
-        let swipingNavigationController = UINavigationController(rootViewController: UIHostingController(rootView: SwipingView()))
-        swipingNavigationController.tabBarItem = UITabBarItem(
-            title: "Random",
-            image: UIImage(systemName: "arrow.2.squarepath"),
-            tag: 1
-        )
-
-     
-
-
-        let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = .accent
-        appearance.shadowImage = UIImage()
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.uiTheme.navBarText]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.uiTheme.navBarText]
-
-        swipingNavigationController.navigationBar.standardAppearance = appearance
-        swipingNavigationController.navigationBar.compactAppearance = appearance
-        swipingNavigationController.navigationBar.scrollEdgeAppearance = appearance
-        swipingNavigationController.topViewController?.title = "Random"
-
-        return swipingNavigationController
+        return navigationController
     }
 }
