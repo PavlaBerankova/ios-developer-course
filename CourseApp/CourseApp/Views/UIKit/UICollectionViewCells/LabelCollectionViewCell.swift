@@ -35,7 +35,8 @@ private extension LabelCollectionViewCell {
 
     func configureLabel() {
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        nameLabel.textColor = .white
+        nameLabel.textColor = UIColor.uiTheme.labelColor
+        nameLabel.font = TextType.h2Title.uiFont
     }
 
     func setupConstraints() {

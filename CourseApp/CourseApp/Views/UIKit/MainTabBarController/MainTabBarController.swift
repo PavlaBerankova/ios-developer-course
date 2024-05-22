@@ -11,22 +11,14 @@ import UIKit
 final class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        seteupGlobalTabBarUI()
-        // setupTabBar()
+        setupGlobalTabBarUI()
         setupTabBarController()
     }
 }
 
 // MARK: - UI Setup
 private extension MainTabBarController {
-    //    func setupTabBar() {
-    //        tabBar.backgroundImage = UIImage()
-    //        tabBar.shadowImage = UIImage()
-    //        tabBar.backgroundColor = .red
-    //        tabBar.tintColor = .blue
-    //    }
-
-    func seteupGlobalTabBarUI() {
+    func setupGlobalTabBarUI() {
         let tabBarAppearance = UITabBarAppearance()
         UITabBar.appearance().backgroundColor = .accent
 
@@ -54,8 +46,8 @@ private extension MainTabBarController {
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = .accent
         appearance.shadowImage = UIImage()
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.black]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.uiTheme.navBarText]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.uiTheme.navBarText]
 
         categoriesNavigationController.navigationBar.standardAppearance = appearance
         categoriesNavigationController.navigationBar.compactAppearance = appearance
@@ -71,6 +63,17 @@ private extension MainTabBarController {
             image: UIImage(systemName: "arrow.2.squarepath"),
             tag: 1
         )
+
+
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .accent
+        appearance.shadowImage = UIImage()
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.uiTheme.navBarText]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.uiTheme.navBarText]
+
+        swipingNavigationController.navigationBar.standardAppearance = appearance
+        swipingNavigationController.navigationBar.compactAppearance = appearance
+        swipingNavigationController.navigationBar.scrollEdgeAppearance = appearance
 
         return swipingNavigationController
     }

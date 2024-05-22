@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		441EEA272BFDDC7F00D0711B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441EEA262BFDDC7F00D0711B /* Color.swift */; };
 		4428D5112BDBAB90006C4AB4 /* CourseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4428D5102BDBAB90006C4AB4 /* CourseApp.swift */; };
 		4428D5132BDBAB90006C4AB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4428D5122BDBAB90006C4AB4 /* ContentView.swift */; };
 		4428D5152BDBAB91006C4AB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4428D5142BDBAB91006C4AB4 /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		441EEA262BFDDC7F00D0711B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		4428D50D2BDBAB90006C4AB4 /* Course App Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Course App Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4428D5102BDBAB90006C4AB4 /* CourseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseApp.swift; sourceTree = "<group>"; };
 		4428D5122BDBAB90006C4AB4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -138,6 +140,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		441EEA252BFDDC6B00D0711B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				441EEA262BFDDC7F00D0711B /* Color.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		4428D5042BDBAB90006C4AB4 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +171,7 @@
 		4428D50F2BDBAB90006C4AB4 /* CourseApp */ = {
 			isa = PBXGroup;
 			children = (
+				441EEA252BFDDC6B00D0711B /* Extension */,
 				4428D5102BDBAB90006C4AB4 /* CourseApp.swift */,
 				44DD47F42BF9FEA400F36B1C /* SharedUI */,
 				44F8150F2BF742CB002A01D1 /* Views */,
@@ -499,6 +510,7 @@
 				44DD47F92BFA015300F36B1C /* ResizableBordered.swift in Sources */,
 				44FF72162BFB780F00A3CB26 /* MainTabBarController.swift in Sources */,
 				446B55AD2BECD7BA0089D0C4 /* AppDelegate.swift in Sources */,
+				441EEA272BFDDC7F00D0711B /* Color.swift in Sources */,
 				44DD47FE2BFA0CD100F36B1C /* SwipingView.swift in Sources */,
 				44F815182BF74348002A01D1 /* HorizontalScrollingCollectionViewCell.swift in Sources */,
 				44FF72142BFB6AF100A3CB26 /* ScratchView.swift in Sources */,

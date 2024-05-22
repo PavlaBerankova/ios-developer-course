@@ -9,6 +9,8 @@ import SwiftUI
 
 struct BorderedModifiers: ViewModifier {
     var cornerRadius: CGFloat
+    private let lineWidth: CGFloat = 2
+    private let radius: CGFloat = 2
 
     func body(content: Content) -> some View {
         content
@@ -16,9 +18,9 @@ struct BorderedModifiers: ViewModifier {
             .cornerRadius(cornerRadius)
             .overlay(
                 RoundedRectangle(cornerRadius: cornerRadius)
-                    .stroke(Color.white, lineWidth: 2)
+                    .stroke(Color.theme.accent, lineWidth: lineWidth)
             )
-            .shadow(radius: 2)
+            .shadow(radius: radius)
     }
 }
 

@@ -16,6 +16,7 @@ struct ScratchView: View {
     // MARK: - Variables
     let image: Image
     let text: String
+    let cornerRadius: CGFloat = 10
 
     @State private var currentLine = Line()
     @State private var lines = [Line]()
@@ -23,11 +24,11 @@ struct ScratchView: View {
     var body: some View {
         ZStack(alignment: .top) {
             image
-                .resizableBordered(cornerRadius: 10)
+                .resizableBordered(cornerRadius: cornerRadius)
                 .scaledToFit()
 
-            RoundedRectangle(cornerRadius: 10)
-                .fill(.bg)
+            RoundedRectangle(cornerRadius: cornerRadius)
+                .fill(Color.theme.backgroundColor)
                 .overlay {
                     Text(text)
                         .foregroundStyle(.white)

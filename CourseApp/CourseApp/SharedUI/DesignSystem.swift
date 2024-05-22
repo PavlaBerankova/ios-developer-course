@@ -29,6 +29,10 @@ extension UIFont {
     static func bold(with size: FontSize) -> UIFont {
         UIFont(name: FontType.bold.rawValue, size: size.rawValue)!
     }
+
+    static func mediumItalic(with size: FontSize) -> UIFont {
+        UIFont(name: FontType.mediumItalic.rawValue, size: size.rawValue)!
+    }
 }
 
 extension Font {
@@ -39,18 +43,36 @@ extension Font {
     static func bold(with size: FontSize) -> Font {
         Font.custom(FontType.bold.rawValue, size: size.rawValue)
     }
+
+    static func mediumItalic(with size: FontSize) -> Font {
+        Font.custom(FontType.mediumItalic.rawValue, size: size.rawValue)
+    }
 }
 
 enum TextType {
     case h1Title
     case h2Title
+    case h3Title
 
     var font: Font {
         switch self {
         case .h1Title:
-                .bold(with: .size36)
+                .bold(with: .size28)
+        case .h2Title:
+                .mediumItalic(with: .size20)
         default:
-                .regular(with: .size20)
+                .regular(with: .size12)
+        }
+    }
+
+    var uiFont: UIFont {
+        switch self {
+        case .h1Title:
+                .bold(with: .size28)
+        case .h2Title:
+                .mediumItalic(with: .size20)
+        default:
+                .regular(with: .size12)
         }
     }
 
