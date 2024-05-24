@@ -10,10 +10,10 @@ import SwiftUI
 
 // MARK: UIViewControllerRepresentable
 struct CoordinatorView<T: ViewControllerCoordinator>: UIViewControllerRepresentable {
-    let coordintator: T
+    let coordinator: T
 
     func makeUIViewController(context: Context) -> UIViewController {
-        coordintator.rootViewController
+        coordinator.rootViewController
     }
 
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) { }

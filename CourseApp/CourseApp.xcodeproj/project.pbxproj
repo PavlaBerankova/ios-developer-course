@@ -31,6 +31,7 @@
 		447F285C2C008B960098E9CF /* TabBarControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447F285B2C008B960098E9CF /* TabBarControllerCoordinator.swift */; };
 		447F285E2C008D3B0098E9CF /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447F285D2C008D3B0098E9CF /* MainTabBarCoordinator.swift */; };
 		447F28602C00BEE60098E9CF /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447F285F2C00BEE60098E9CF /* CoordinatorView.swift */; };
+		447F28622C00D76F0098E9CF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447F28612C00D76F0098E9CF /* AppCoordinator.swift */; };
 		44A247A22BFE1106000999A5 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A247A12BFE1106000999A5 /* Image.swift */; };
 		44A247A52BFE13EF000999A5 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A247A42BFE13EF000999A5 /* FontSize.swift */; };
 		44A247A72BFE1407000999A5 /* FontType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A247A62BFE1407000999A5 /* FontType.swift */; };
@@ -101,6 +102,7 @@
 		447F285B2C008B960098E9CF /* TabBarControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerCoordinator.swift; sourceTree = "<group>"; };
 		447F285D2C008D3B0098E9CF /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
 		447F285F2C00BEE60098E9CF /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
+		447F28612C00D76F0098E9CF /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		44A247A12BFE1106000999A5 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		44A247A42BFE13EF000999A5 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
 		44A247A62BFE1407000999A5 /* FontType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontType.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				447F285B2C008B960098E9CF /* TabBarControllerCoordinator.swift */,
 				447F285D2C008D3B0098E9CF /* MainTabBarCoordinator.swift */,
 				447F285F2C00BEE60098E9CF /* CoordinatorView.swift */,
+				447F28612C00D76F0098E9CF /* AppCoordinator.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				447F28622C00D76F0098E9CF /* AppCoordinator.swift in Sources */,
 				44F8150E2BF7406E002A01D1 /* MockDataProvider.swift in Sources */,
 				446B55AD2BECD7BA0089D0C4 /* AppDelegate.swift in Sources */,
 				44DD47FE2BFA0CD100F36B1C /* SwipingView.swift in Sources */,

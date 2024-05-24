@@ -7,7 +7,13 @@
 import Firebase
 import SwiftUI
 
-class AppDelegate: NSObject, UIApplicationDelegate {
+final class AppDelegate: NSObject, UIApplicationDelegate {
+    let appCoordinator: some AppCoordinating = {
+        let coordinator = AppCoordinator()
+        coordinator.start()
+        return coordinator
+    }()
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         FirebaseApp.configure()
 

@@ -16,7 +16,6 @@ final class MainTabBarCoordinator: NSObject, TabBarControllerCoordinator {
 // MARK: - Start coordinator
 extension MainTabBarCoordinator {
     func start() {
-        setupGlobalTabBarUI()
         tabBarController.viewControllers = [
             setupCategoriesViewController(),
             setupSwipingViewController()
@@ -26,17 +25,6 @@ extension MainTabBarCoordinator {
 
 // MARK: - Factory method
 private extension MainTabBarCoordinator {
-    func setupGlobalTabBarUI() {
-        let tabBarAppearance = UITabBarAppearance()
-        UITabBar.appearance().backgroundColor = .accent
-        tabBarAppearance.stackedLayoutAppearance.normal.iconColor = UIColor.gray
-        tabBarAppearance.stackedLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.gray]
-        tabBarAppearance.stackedLayoutAppearance.selected.iconColor = UIColor.black
-        tabBarAppearance.stackedLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-
-        UITabBar.appearance().standardAppearance = tabBarAppearance
-    }
-
     func setupNavigationBarAppearance(navigationController: UINavigationController, navigationBarTitle: String) {
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = .accent
