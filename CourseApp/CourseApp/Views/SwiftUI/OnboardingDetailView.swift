@@ -13,33 +13,39 @@ struct OnboardingDetailView: View {
     @Binding var path: NavigationPath
 
     var body: some View {
-        VStack {
-            Text(screenNumber == 0 ? "Onboarding" : "Screen number: \(screenNumber) of \(totalScreen)")
-                .font(.largeTitle)
-                .foregroundStyle(.black)
-            Button {
-                if screenNumber >= totalScreen {
-                    path = NavigationPath()
-                    // dismiss sheet
-                } else {
-                    path.append(screenNumber)
+        ZStack {
+            Color(.bg)
+                .ignoresSafeArea()
+
+            VStack {
+                Text(screenNumber == 0 ? "Onboarding" : "Screen number: \(screenNumber) of \(totalScreen)")
+                    .font(.largeTitle)
+                    .foregroundStyle(.white)
+                Button {
+                    if screenNumber >= totalScreen {
+                        path = NavigationPath()
+                        // dismiss sheet
+                    } else {
+                        path.append(screenNumber)
+                    }
+                } label: {
+                    if screenNumber == 0 {
+                        Text("Start")
+                    } else if screenNumber >= totalScreen {
+                        Text("End Onboarding")
+                    } else {
+                        Text("Next Screen")
+                    }
                 }
-            } label: {
-                if screenNumber == 0 {
-                    Text("Start")
-                } else if screenNumber >= totalScreen {
-                    Text("End Onboarding")
-                } else {
-                    Text("Next Screen")
-                }
+                .bold()
+                .padding()
+                .foregroundColor(.accent)
+                .background(.black)
+                .bordered(cornerRadius: 10)
             }
-            .bold()
-            .padding()
-            .background(.black)
-            .cornerRadius(10)
-        }
-        .navigationDestination(for: Int.self) { number in
-            OnboardingDetailView(screenNumber: number + 1, totalScreen: totalScreen, path: $path)
+            .navigationDestination(for: Int.self) { number in
+                OnboardingDetailView(screenNumber: number + 1, totalScreen: totalScreen, path: $path)
+            }
         }
     }
 }

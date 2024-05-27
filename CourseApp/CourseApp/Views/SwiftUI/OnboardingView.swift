@@ -20,6 +20,7 @@ struct OnboardingView: View {
                     OnboardingDetailView(screenNumber: number, totalScreen: totalScreens, path: $path)
                 }
         }
+        .darkBackgroundColor()
     }
 }
 

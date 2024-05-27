@@ -11,6 +11,7 @@
 		4428D5132BDBAB90006C4AB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4428D5122BDBAB90006C4AB4 /* ContentView.swift */; };
 		4428D5152BDBAB91006C4AB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4428D5142BDBAB91006C4AB4 /* Assets.xcassets */; };
 		4428D5182BDBAB91006C4AB4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4428D5172BDBAB91006C4AB4 /* Preview Assets.xcassets */; };
+		442BE5B02C04A5B100F36B01 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442BE5AF2C04A5B100F36B01 /* ProfileView.swift */; };
 		443ACBC22BF3634F00E64A3F /* Course_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443ACBC12BF3634F00E64A3F /* Course_AppUITests.swift */; };
 		443ACBC42BF3634F00E64A3F /* Course_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443ACBC32BF3634F00E64A3F /* Course_AppUITestsLaunchTests.swift */; };
 		443ACBD32BF3636D00E64A3F /* Course_AppUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443ACBD22BF3636D00E64A3F /* Course_AppUnitTests.swift */; };
@@ -83,6 +84,7 @@
 		4428D5122BDBAB90006C4AB4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4428D5142BDBAB91006C4AB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4428D5172BDBAB91006C4AB4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		442BE5AF2C04A5B100F36B01 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		443ACBBF2BF3634F00E64A3F /* Course AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Course AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		443ACBC12BF3634F00E64A3F /* Course_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course_AppUITests.swift; sourceTree = "<group>"; };
 		443ACBC32BF3634F00E64A3F /* Course_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 				44FF72132BFB6AF100A3CB26 /* ScratchView.swift */,
 				44D7742C2C048D470013F776 /* OnboardingView.swift */,
 				44D7742E2C048D640013F776 /* OnboardingDetailView.swift */,
+				442BE5AF2C04A5B100F36B01 /* ProfileView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -574,6 +577,7 @@
 				4428D5132BDBAB90006C4AB4 /* ContentView.swift in Sources */,
 				4428D5112BDBAB90006C4AB4 /* CourseApp.swift in Sources */,
 				445E84702BFE04DF00B80FC7 /* BackgroundColorModifier.swift in Sources */,
+				442BE5B02C04A5B100F36B01 /* ProfileView.swift in Sources */,
 				44DD47F72BF9FEE800F36B1C /* BorderedModifiers.swift in Sources */,
 				44D7742F2C048D640013F776 /* OnboardingDetailView.swift in Sources */,
 				447F28582C0079BE0098E9CF /* ViewControllerCoordinator.swift in Sources */,

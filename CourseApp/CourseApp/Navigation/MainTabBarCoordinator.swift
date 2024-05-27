@@ -18,7 +18,8 @@ extension MainTabBarCoordinator {
     func start() {
         tabBarController.viewControllers = [
             setupCategoriesViewController(),
-            setupSwipingViewController()
+            setupSwipingViewController(),
+            setupProfileViewController()
         ]
     }
 }
@@ -56,6 +57,13 @@ private extension MainTabBarCoordinator {
         swipingTabViewController.tabBarItem = UITabBarItem(title: "Random", image: UIImage(systemName: "arrow.2.squarepath"), tag: 1)
         setupNavigationBarAppearance(navigationController: swipingTabViewController, navigationBarTitle: "Random")
         return swipingTabViewController
+    }
+
+    func setupProfileViewController() -> UIViewController {
+        let profileTabViewController = UINavigationController(rootViewController: UIHostingController(rootView: ProfileView()))
+        profileTabViewController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.circle"), tag: 2)
+        setupNavigationBarAppearance(navigationController: profileTabViewController, navigationBarTitle: "Profile")
+        return profileTabViewController
     }
 }
 
