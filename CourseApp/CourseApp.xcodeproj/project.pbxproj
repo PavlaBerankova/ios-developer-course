@@ -45,6 +45,8 @@
 		44BD7E1B2BF284FE005033A4 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44BD7E182BF284FE005033A4 /* Poppins-MediumItalic.ttf */; };
 		44CA0AF52BF73E0900B9E40E /* ReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA0AF42BF73E0900B9E40E /* ReusableIdentifier.swift */; };
 		44CA0AF72BF73E1C00B9E40E /* UICollectionView+ReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA0AF62BF73E1C00B9E40E /* UICollectionView+ReusableIdentifier.swift */; };
+		44D7742D2C048D470013F776 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D7742C2C048D470013F776 /* OnboardingView.swift */; };
+		44D7742F2C048D640013F776 /* OnboardingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D7742E2C048D640013F776 /* OnboardingDetailView.swift */; };
 		44DD47F32BF8ADE700F36B1C /* HomeViewSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DD47F22BF8ADE700F36B1C /* HomeViewSwiftUI.swift */; };
 		44DD47F72BF9FEE800F36B1C /* BorderedModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DD47F62BF9FEE800F36B1C /* BorderedModifiers.swift */; };
 		44DD47FC2BFA049000F36B1C /* SelectableButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DD47FB2BFA049000F36B1C /* SelectableButtonStyle.swift */; };
@@ -116,6 +118,8 @@
 		44BD7E182BF284FE005033A4 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		44CA0AF42BF73E0900B9E40E /* ReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableIdentifier.swift; sourceTree = "<group>"; };
 		44CA0AF62BF73E1C00B9E40E /* UICollectionView+ReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ReusableIdentifier.swift"; sourceTree = "<group>"; };
+		44D7742C2C048D470013F776 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		44D7742E2C048D640013F776 /* OnboardingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDetailView.swift; sourceTree = "<group>"; };
 		44DD47F22BF8ADE700F36B1C /* HomeViewSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewSwiftUI.swift; sourceTree = "<group>"; };
 		44DD47F62BF9FEE800F36B1C /* BorderedModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedModifiers.swift; sourceTree = "<group>"; };
 		44DD47FB2BFA049000F36B1C /* SelectableButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableButtonStyle.swift; sourceTree = "<group>"; };
@@ -369,6 +373,8 @@
 				44DD47FD2BFA0CD100F36B1C /* SwipingView.swift */,
 				44BBFAD32BFB562400D3DF2F /* SwipingCard.swift */,
 				44FF72132BFB6AF100A3CB26 /* ScratchView.swift */,
+				44D7742C2C048D470013F776 /* OnboardingView.swift */,
+				44D7742E2C048D640013F776 /* OnboardingDetailView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -555,6 +561,7 @@
 				447F285A2C008B750098E9CF /* NavigationControllerCoordinator.swift in Sources */,
 				44A247A52BFE13EF000999A5 /* FontSize.swift in Sources */,
 				44B9984A2BFC98C4006D33EA /* TextTypeModifier.swift in Sources */,
+				44D7742D2C048D470013F776 /* OnboardingView.swift in Sources */,
 				44BBFAD42BFB562400D3DF2F /* SwipingCard.swift in Sources */,
 				447F285C2C008B960098E9CF /* TabBarControllerCoordinator.swift in Sources */,
 				44CA0AF72BF73E1C00B9E40E /* UICollectionView+ReusableIdentifier.swift in Sources */,
@@ -568,6 +575,7 @@
 				4428D5112BDBAB90006C4AB4 /* CourseApp.swift in Sources */,
 				445E84702BFE04DF00B80FC7 /* BackgroundColorModifier.swift in Sources */,
 				44DD47F72BF9FEE800F36B1C /* BorderedModifiers.swift in Sources */,
+				44D7742F2C048D640013F776 /* OnboardingDetailView.swift in Sources */,
 				447F28582C0079BE0098E9CF /* ViewControllerCoordinator.swift in Sources */,
 				44CA0AF52BF73E0900B9E40E /* ReusableIdentifier.swift in Sources */,
 				44DD47F32BF8ADE700F36B1C /* HomeViewSwiftUI.swift in Sources */,
