@@ -23,7 +23,7 @@ extension AppCoordinator {
 
     func setupGlobalTabBarUI() {
         let tabBarAppearance = UITabBarAppearance()
-        UITabBar.appearance().backgroundColor = .accent
+        UITabBar.appearance().backgroundColor = UIColor.main
         tabBarAppearance.stackedLayoutAppearance.normal.iconColor = UIColor.gray
         tabBarAppearance.stackedLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.gray]
         tabBarAppearance.stackedLayoutAppearance.selected.iconColor = UIColor.black

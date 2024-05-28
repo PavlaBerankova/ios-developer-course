@@ -39,7 +39,7 @@ struct OnboardingDetailView: View {
                 }
                 .bold()
                 .padding()
-                .foregroundColor(.accent)
+                .foregroundColor(.main)
                 .background(.black)
                 .bordered(cornerRadius: 10)
             }

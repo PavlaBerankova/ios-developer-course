@@ -28,7 +28,7 @@ extension MainTabBarCoordinator {
 private extension MainTabBarCoordinator {
     func setupNavigationBarAppearance(navigationController: UINavigationController, navigationBarTitle: String) {
         let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = .accent
+        appearance.backgroundColor = UIColor.main
         appearance.shadowImage = UIImage()
         appearance.titleTextAttributes = [.foregroundColor: TextType.navTitle.uiColor]
         appearance.largeTitleTextAttributes = [.foregroundColor: TextType.navTitle.uiColor]
@@ -46,24 +46,29 @@ private extension MainTabBarCoordinator {
     }
 
     func setupCategoriesViewController() -> UIViewController {
-        let categoriesTabViewController = UINavigationController(rootViewController: HomeViewController())
-        categoriesTabViewController.tabBarItem = UITabBarItem(title: "Categories", image: UIImage(systemName: "rectangle.grid.1x2"), tag: 0)
-        setupNavigationBarAppearance(navigationController: categoriesTabViewController, navigationBarTitle: "Categories")
-        return categoriesTabViewController
+        let categoriesCoordinator = CategoriesNavigationCoordinator()
+        startChildCoordinator(categoriesCoordinator)
+        // let categoriesTabViewController = UINavigationController(rootViewController: HomeViewController())
+        categoriesCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Categories", image: UIImage(systemName: "rectangle.grid.1x2"), tag: 0)
+        setupNavigationBarAppearance(navigationController: categoriesCoordinator.navigationController, navigationBarTitle: "Categories")
+        return categoriesCoordinator.rootViewController
     }
 
     func setupSwipingViewController() -> UIViewController {
-        let swipingTabViewController = UINavigationController(rootViewController: UIHostingController(rootView: SwipingView()))
-        swipingTabViewController.tabBarItem = UITabBarItem(title: "Random", image: UIImage(systemName: "arrow.2.squarepath"), tag: 1)
-        setupNavigationBarAppearance(navigationController: swipingTabViewController, navigationBarTitle: "Random")
-        return swipingTabViewController
+        let swipingCoordinator = SwipingCardNavigationCoordinator()
+        startChildCoordinator(swipingCoordinator)
+        swipingCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Random", image: UIImage(systemName: "arrow.2.squarepath"), tag: 1)
+        setupNavigationBarAppearance(navigationController: swipingCoordinator.navigationController, navigationBarTitle: "Random")
+        return swipingCoordinator.rootViewController
     }
 
     func setupProfileViewController() -> UIViewController {
-        let profileTabViewController = UINavigationController(rootViewController: UIHostingController(rootView: ProfileView()))
-        profileTabViewController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.circle"), tag: 2)
-        setupNavigationBarAppearance(navigationController: profileTabViewController, navigationBarTitle: "Profile")
-        return profileTabViewController
+        let profileCoordinator = ProfileNavigationCoordinator()
+        startChildCoordinator(profileCoordinator)
+        // let profileTabViewController = UINavigationController(rootViewController: UIHostingController(rootView: ProfileView()))
+        profileCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.circle"), tag: 2)
+        setupNavigationBarAppearance(navigationController: profileCoordinator.navigationController, navigationBarTitle: "Profile")
+        return profileCoordinator.rootViewController
     }
 }
 

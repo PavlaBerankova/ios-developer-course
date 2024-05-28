@@ -17,6 +17,12 @@
 		443ACBD32BF3636D00E64A3F /* Course_AppUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443ACBD22BF3636D00E64A3F /* Course_AppUnitTests.swift */; };
 		443B910F2BF7570900829CAA /* HomeView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443B910E2BF7570900829CAA /* HomeView+Helper.swift */; };
 		443DF72C2BECB15B00B2B1C0 /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443DF72B2BECB15B00B2B1C0 /* BuildConfiguration.swift */; };
+		443F038D2C05E58500174107 /* OnboardingNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F038C2C05E58500174107 /* OnboardingNavigationCoordinator.swift */; };
+		443F038F2C05E5B700174107 /* SwipingCardNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F038E2C05E5B700174107 /* SwipingCardNavigationCoordinator.swift */; };
+		443F03912C06001000174107 /* ProfileNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F03902C06001000174107 /* ProfileNavigationCoordinator.swift */; };
+		443F03932C0600EB00174107 /* CategoriesNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F03922C0600EB00174107 /* CategoriesNavigationCoordinator.swift */; };
+		443F03952C06065100174107 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F03942C06065100174107 /* CustomNavigationController.swift */; };
+		443F03972C06069900174107 /* CustomNavigationControllerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F03962C06069900174107 /* CustomNavigationControllerEvent.swift */; };
 		445E84702BFE04DF00B80FC7 /* BackgroundColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445E846F2BFE04DF00B80FC7 /* BackgroundColorModifier.swift */; };
 		4463B0D32BF63EA600004353 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4463B0D22BF63EA600004353 /* Colors.xcassets */; };
 		4463B0D52BF63EAF00004353 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4463B0D42BF63EAF00004353 /* Images.xcassets */; };
@@ -92,6 +98,12 @@
 		443ACBD22BF3636D00E64A3F /* Course_AppUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course_AppUnitTests.swift; sourceTree = "<group>"; };
 		443B910E2BF7570900829CAA /* HomeView+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+Helper.swift"; sourceTree = "<group>"; };
 		443DF72B2BECB15B00B2B1C0 /* BuildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfiguration.swift; sourceTree = "<group>"; };
+		443F038C2C05E58500174107 /* OnboardingNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNavigationCoordinator.swift; sourceTree = "<group>"; };
+		443F038E2C05E5B700174107 /* SwipingCardNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingCardNavigationCoordinator.swift; sourceTree = "<group>"; };
+		443F03902C06001000174107 /* ProfileNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationCoordinator.swift; sourceTree = "<group>"; };
+		443F03922C0600EB00174107 /* CategoriesNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesNavigationCoordinator.swift; sourceTree = "<group>"; };
+		443F03942C06065100174107 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		443F03962C06069900174107 /* CustomNavigationControllerEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationControllerEvent.swift; sourceTree = "<group>"; };
 		444815372BEB99330016FCC3 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		444815382BEB99460016FCC3 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		4448153D2BEBB6760016FCC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -260,6 +272,10 @@
 				447F285D2C008D3B0098E9CF /* MainTabBarCoordinator.swift */,
 				447F285F2C00BEE60098E9CF /* CoordinatorView.swift */,
 				447F28612C00D76F0098E9CF /* AppCoordinator.swift */,
+				443F038C2C05E58500174107 /* OnboardingNavigationCoordinator.swift */,
+				443F038E2C05E5B700174107 /* SwipingCardNavigationCoordinator.swift */,
+				443F03902C06001000174107 /* ProfileNavigationCoordinator.swift */,
+				443F03922C0600EB00174107 /* CategoriesNavigationCoordinator.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -387,6 +403,8 @@
 			children = (
 				44B998472BFC986B006D33EA /* HomeViewController */,
 				44F815122BF742E6002A01D1 /* UICollectionViewCells */,
+				443F03942C06065100174107 /* CustomNavigationController.swift */,
+				443F03962C06069900174107 /* CustomNavigationControllerEvent.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -555,12 +573,15 @@
 				44DD47FE2BFA0CD100F36B1C /* SwipingView.swift in Sources */,
 				44F815182BF74348002A01D1 /* HorizontalScrollingCollectionViewCell.swift in Sources */,
 				447F285E2C008D3B0098E9CF /* MainTabBarCoordinator.swift in Sources */,
+				443F03912C06001000174107 /* ProfileNavigationCoordinator.swift in Sources */,
 				44A247A72BFE1407000999A5 /* FontType.swift in Sources */,
 				44FF72142BFB6AF100A3CB26 /* ScratchView.swift in Sources */,
 				44F815142BF7430E002A01D1 /* ImageCollectionViewCell.swift in Sources */,
 				44F815162BF74329002A01D1 /* LabelCollectionViewCell.swift in Sources */,
 				443DF72C2BECB15B00B2B1C0 /* BuildConfiguration.swift in Sources */,
 				44DD47FC2BFA049000F36B1C /* SelectableButtonStyle.swift in Sources */,
+				443F03972C06069900174107 /* CustomNavigationControllerEvent.swift in Sources */,
+				443F03952C06065100174107 /* CustomNavigationController.swift in Sources */,
 				447F285A2C008B750098E9CF /* NavigationControllerCoordinator.swift in Sources */,
 				44A247A52BFE13EF000999A5 /* FontSize.swift in Sources */,
 				44B9984A2BFC98C4006D33EA /* TextTypeModifier.swift in Sources */,
@@ -579,11 +600,14 @@
 				445E84702BFE04DF00B80FC7 /* BackgroundColorModifier.swift in Sources */,
 				442BE5B02C04A5B100F36B01 /* ProfileView.swift in Sources */,
 				44DD47F72BF9FEE800F36B1C /* BorderedModifiers.swift in Sources */,
+				443F038F2C05E5B700174107 /* SwipingCardNavigationCoordinator.swift in Sources */,
 				44D7742F2C048D640013F776 /* OnboardingDetailView.swift in Sources */,
 				447F28582C0079BE0098E9CF /* ViewControllerCoordinator.swift in Sources */,
+				443F03932C0600EB00174107 /* CategoriesNavigationCoordinator.swift in Sources */,
 				44CA0AF52BF73E0900B9E40E /* ReusableIdentifier.swift in Sources */,
 				44DD47F32BF8ADE700F36B1C /* HomeViewSwiftUI.swift in Sources */,
 				44A247AD2BFE147A000999A5 /* TextType.swift in Sources */,
+				443F038D2C05E58500174107 /* OnboardingNavigationCoordinator.swift in Sources */,
 				44A247A22BFE1106000999A5 /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

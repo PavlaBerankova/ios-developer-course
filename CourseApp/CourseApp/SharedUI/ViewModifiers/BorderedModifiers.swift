@@ -18,7 +18,7 @@ struct BorderedModifiers: ViewModifier {
             .cornerRadius(cornerRadius)
             .overlay(
                 RoundedRectangle(cornerRadius: cornerRadius)
-                    .stroke(.accent, lineWidth: lineWidth)
+                    .stroke(.main, lineWidth: lineWidth)
             )
             .shadow(radius: radius)
     }
