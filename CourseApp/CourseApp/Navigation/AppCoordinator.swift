@@ -38,4 +38,8 @@ extension AppCoordinator {
         coordinator.start()
         return coordinator.rootViewController
     }
+
+    func hadleDeeplink(deeplink: Deeplink) {
+        childCoordinators.forEach { $0.handleDeeplink(deeplink: deeplink) }
+    }
 }
