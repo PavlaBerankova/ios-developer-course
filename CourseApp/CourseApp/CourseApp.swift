@@ -4,18 +4,22 @@
 //
 
 import FirebaseCore
+import os
 import SwiftUI
 
 @main
 struct CourseApp: App {
     // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    private var logger = Logger()
 
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                ContentView()
-            }
+            MainTabView()
+                .ignoresSafeArea(edges: .all)
+                .onAppear {
+                    logger.info("Content view has appeared")
+                }
         }
     }
 }
